@@ -102,7 +102,7 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
   console.log(result);
   return (
     <div>
-      <div className='flex flex-col text-white text-[20px] text-center gap-[3px] items-center justify-center'>
+      <div className='flex flex-col text-white text-[20px] text-center gap-[3px] items-center justify-center max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Название:</span>
 
         <div className='w-[30vw] ml-[1vw]'>
@@ -115,28 +115,30 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
             style={{}}
           />
         </div>
+        <div className='flex'>
+          <div className='text-white ml-[20px] mt-[0px] max-2xl:text-[16px]'>
+            Доступно:
+            <Checkbox
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setIsAvaliable(e.target.checked)
+              }
+              checked={isAvaliable}
+              style={{ color: "white" }}
+            />
+          </div>
+          <div className='text-white ml-[20px] mt-[0px] max-2xl:text-[16px]'>
+            Есть зарядка?
+            <Checkbox
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setIsCharge(e.target.checked)
+              }
+              checked={isCharge}
+              style={{ color: "white" }}
+            />
+          </div>
+        </div>
 
-        <div className='text-white ml-[20px] mt-[10px]'>
-          Доступно:
-          <Checkbox
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setIsAvaliable(e.target.checked)
-            }
-            checked={isAvaliable}
-            style={{ color: "white" }}
-          />
-        </div>
-        <div className='text-white ml-[20px] mt-[10px]'>
-          Есть зарядка?
-          <Checkbox
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setIsCharge(e.target.checked)
-            }
-            checked={isCharge}
-            style={{ color: "white" }}
-          />
-        </div>
-        <div className='flex flex-col text-white text-[20px] text-center gap-[3px]'>
+        <div className='flex flex-col text-white text-[20px] text-center gap-[3px] max-2xl:text-[16px]'>
           <span className='ml-[1vw]'>Количество тяг:</span>
           <div className='w-[30vw] ml-[1vw]'>
             <Input
@@ -149,7 +151,7 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
             />
           </div>
         </div>
-        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center'>
+        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px]'>
           Тип никотина:
           <div className='w-[11vw] ml-[1vw]'>
             <Input
@@ -172,7 +174,7 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
             />
           </div>
         </div>
-        <div className='text-white mt-[10px] flex flex-col text-[20px] text-center'>
+        <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
           <span className='ml-[1vw]'>Вкусы("apple" "pineapple"):</span>
 
           <div className='w-[30vw] ml-[1vw]'>
@@ -186,7 +188,7 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
             />
           </div>
         </div>
-        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center'>
+        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px]'>
           Цена("10" "20"):
           <div className='w-[11vw] ml-[1vw]'>
             <Input
@@ -209,7 +211,7 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
             />
           </div>
         </div>
-        <div className='text-white mt-[10px] flex flex-col text-[20px] text-center'>
+        <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
           <span className='ml-[1vw]'>Ссылка на картинку:</span>
 
           <div className='w-[30vw] ml-[1vw]'>

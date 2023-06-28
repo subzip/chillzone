@@ -11,6 +11,7 @@ import Retail from "./components/Pages/Retail";
 import Assortment from "./components/Pages/Assortment";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Auth from "./components/Pages/Auth";
+import Support from "./components/Pages/Support";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/app' element={<Application />} />
         <Route path='/retail' element={<Retail />} />
         <Route path='/manager' element={<Auth />} />
+        <Route path='/support' element={<Support />} />
         <Route
           path='/assortment'
           element={

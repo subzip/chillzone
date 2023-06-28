@@ -27,7 +27,7 @@ const AddModal = ({ active, setActive, title, tastes }: AddModalProps) => {
       onClick={() => setActive(false)}
     >
       <div
-        className='modal__content flex flex-col items-center cursor-pointer h-[70%] w-[60%] py-[10vh]'
+        className='modal__content flex flex-col items-center cursor-pointer h-[80vh] w-[60vw] py-[10vh]'
         onClick={(e) => e.stopPropagation()}
       >
         <img
@@ -36,11 +36,14 @@ const AddModal = ({ active, setActive, title, tastes }: AddModalProps) => {
           className='absolute ml-[60vw] mt-[-3vh]'
           onClick={() => setActive(false)}
         />
-        <h1 className='text-white text-[35px] font-semibold tracking-wider'>
-          Добавить товар
-        </h1>
-        <Line styles='bg-yellow w-[10vw] h-[2px] mt-[10px]' />
-        <div className='border-t-yellow border-[1px] border-gray border-t-[2px] w-[48vw] h-[75vh] mt-[5vh] flex  gap-[4vh] flex-col items-center '>
+        <div className='flex flex-col items-center'>
+          <h1 className='text-white text-[35px] font-semibold tracking-wider max-2xl:text-[25px]'>
+            Добавить товар
+          </h1>
+          <Line styles='bg-yellow w-[10vw] h-[2px] mt-[10px]' />
+        </div>
+
+        <div className='border-t-yellow border-[1px] border-gray border-t-[2px] w-[48vw] h-[80vh] mt-[5vh] max-2xl:mt-[2vh] flex  gap-[0vh] flex-col items-center '>
           <div className='mt-[2vh] ml-[1vw]'>
             <Select
               defaultValue='Одноразки'
@@ -81,7 +84,7 @@ const AddModal = ({ active, setActive, title, tastes }: AddModalProps) => {
               ]}
             />
           </div>
-          <div className='mt-[-3vh] w-[56%] flex items-center'>
+          <div className='mt-[0vh] w-[56%] flex items-center'>
             {type === "1" && <AddDisposable setActive={setActive} />}
             {type === "2" && <AddLiquid setActive={setActive} />}
             {type === "3" && <AddPod setActive={setActive} />}

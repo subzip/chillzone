@@ -58,7 +58,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
   console.log(result);
   return (
     <div className='flex flex-col items-center ml-[-2vw]'>
-      <div className='flex flex-col text-white text-[20px] text-center gap-[3px]'>
+      <div className='flex flex-col text-white text-[20px] text-center gap-[3px] max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Название:</span>
 
         <div className='w-[30vw] ml-[1vw]'>
@@ -73,7 +73,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
         </div>
       </div>
 
-      <div className='text-white ml-[20px] mt-[10px] text-center'>
+      <div className='text-white ml-[20px] mt-[5px] text-center max-2xl:text-[16px]'>
         Доступно:
         <Checkbox
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -83,7 +83,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
         />
       </div>
 
-      <div className='flex flex-col text-white text-[20px] text-center gap-[3px]'>
+      <div className='flex flex-col text-white text-[20px] text-center gap-[3px] max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Объем баночки:</span>
         <div className='w-[30vw] ml-[1vw]'>
           <Input
@@ -97,7 +97,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
         </div>
       </div>
 
-      <div className='text-white text-[1.1rem] ml-[20px] mt-[10px] flex items-center'>
+      <div className='text-white text-[1.1rem] ml-[20px] mt-[5px] flex items-center max-2xl:text-[16px]'>
         <span>Тип никотина:</span>
 
         <div className='w-[11vw] ml-[1vw]'>
@@ -121,7 +121,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
           />
         </div>
       </div>
-      <div className='text-white mt-[10px] flex flex-col text-[20px] text-center'>
+      <div className='text-white mt-[5px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Вкусы:</span>
 
         <div className='w-[30vw] ml-[1vw]'>
@@ -135,7 +135,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
           />
         </div>
       </div>
-      <div className='text-white text-[1.1rem] ml-[20px] mt-[10px] flex items-center'>
+      <div className='text-white text-[1.1rem] ml-[20px] mt-[5px] flex items-center max-2xl:text-[16px]'>
         <span>Цена:</span>
 
         <div className='w-[11vw] ml-[1vw]'>
@@ -159,7 +159,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
           />
         </div>
       </div>
-      <div className='text-white mt-[10px] flex flex-col text-[20px] text-center'>
+      <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Ссылка на картинку:</span>
 
         <div className='w-[30vw] ml-[1vw]'>

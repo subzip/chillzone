@@ -59,9 +59,9 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
   };
   console.log(result);
   return (
-    <div className='flex flex-col items-center ml-[-2vw]'>
-      <div className='flex flex-col text-white text-[20px] text-center gap-[3px]'>
-        <span className='ml-[1vw]'>Название:</span>
+    <div className='flex flex-col items-center ml-[-2vw] '>
+      <div className='flex flex-col text-white text-[20px] text-center gap-[3px] max-2xl:text-[16px]'>
+        <span className='ml-[1vw] '>Название:</span>
 
         <div className='w-[30vw] ml-[1vw]'>
           <Input
@@ -70,30 +70,32 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setTitle(e.target.value)
             }
-            style={{}}
+            style={{ height: "30px" }}
+          />
+        </div>
+      </div>
+      <div className='flex items-center'>
+        <div className='text-white ml-[20px]  text-center'>
+          Доступно:
+          <Checkbox
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setIsAvaliable(e.target.checked)
+            }
+            style={{ color: "white" }}
+          />
+        </div>
+        <div className='text-white ml-[20px]'>
+          Есть зарядка?
+          <Checkbox
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setIsCharge(e.target.checked)
+            }
+            style={{ color: "white" }}
           />
         </div>
       </div>
 
-      <div className='text-white ml-[20px] mt-[10px] text-center'>
-        Доступно:
-        <Checkbox
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setIsAvaliable(e.target.checked)
-          }
-          style={{ color: "white" }}
-        />
-      </div>
-      <div className='text-white ml-[20px]'>
-        Есть зарядка?
-        <Checkbox
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setIsCharge(e.target.checked)
-          }
-          style={{ color: "white" }}
-        />
-      </div>
-      <div className='flex flex-col text-white text-[20px] text-center gap-[3px]'>
+      <div className='flex flex-col text-white text-[20px] text-center gap-[3px] max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Количество тяг:</span>
         <div className='w-[30vw] ml-[1vw]'>
           <Input
@@ -102,12 +104,12 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setNumberOfRods(Number(e.target.value))
             }
-            style={{}}
+            style={{ height: "30px" }}
           />
         </div>
       </div>
 
-      <div className='text-white text-[1.1rem] ml-[20px] mt-[10px] flex items-center'>
+      <div className='text-white text-[1.1rem] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px]'>
         <span>Тип никотина:</span>
 
         <div className='w-[11vw] ml-[1vw]'>
@@ -117,7 +119,7 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setPercent(Number(e.target.value))
             }
-            style={{}}
+            style={{ height: "30px" }}
           />
         </div>
         <div className='w-[11vw] ml-[1vw]'>
@@ -127,11 +129,11 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setType(e.target.value)
             }
-            style={{}}
+            style={{ height: "30px" }}
           />
         </div>
       </div>
-      <div className='text-white mt-[10px] flex flex-col text-[20px] text-center'>
+      <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Вкусы:</span>
 
         <div className='w-[30vw] ml-[1vw]'>
@@ -141,7 +143,7 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setTastes(e.target.value)
             }
-            style={{}}
+            style={{ height: "30px" }}
           />
         </div>
       </div>
@@ -155,7 +157,7 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setPriceKeys(e.target.value)
             }
-            style={{}}
+            style={{ height: "30px" }}
           />
         </div>
         <div className='w-[11vw] ml-[0.3vw]'>
@@ -165,11 +167,11 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setPriceValue(e.target.value)
             }
-            style={{}}
+            style={{ height: "30px" }}
           />
         </div>
       </div>
-      <div className='text-white mt-[10px] flex flex-col text-[20px] text-center'>
+      <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Ссылка на картинку:</span>
 
         <div className='w-[30vw] ml-[1vw]'>
@@ -179,7 +181,7 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setImageUrl(e.target.value)
             }
-            style={{}}
+            style={{ height: "30px" }}
           />
         </div>
       </div>

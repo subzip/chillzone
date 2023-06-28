@@ -72,7 +72,7 @@ const Navbar = ({ click, setClick }: NavbarProps) => {
     );
   } else
     return (
-      <nav className=' flex flex-col  bg-black w-[20vw] text-white h-[100vh] justify-between fixed nav max-lg:h-full'>
+      <nav className=' flex flex-col  bg-black w-[20vw] text-white h-[100vh] justify-between fixed nav max-lg:h-full max-2xl:h-full'>
         <div className='pt-[25px] pl-[35px]'>
           <h1 className='text-white font-bold ml-[0px] mt-[15px] mb-[35px] font-mono  text-[25px] max-lg:text-[20px]'>
             <span className='text-yellow'>CHILL</span>
@@ -108,8 +108,9 @@ const Navbar = ({ click, setClick }: NavbarProps) => {
         </div>
 
         <div className='pl-[25px] text-[17px] font-bold pb-[20px] '>
-          <p className='mb-[15px] cursor-pointer'>🤓 Поддержка</p>
-          <span className='cursor-pointer'>🤟 chill-zone.store</span>
+          <p className='mb-[1px] cursor-pointer'>
+            <Link to='/support'>🤓 Поддержка</Link>
+          </p>
         </div>
       </nav>
     );

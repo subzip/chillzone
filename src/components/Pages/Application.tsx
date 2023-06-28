@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { Modal } from "react-bootstrap";
+import AppModal from "../Modal/AppModal";
 
 const Application = () => {
+  const [active, setActive] = useState(false);
   const size = window.screen.width;
   return (
     <div className='bg-black main flex flex-col pt-[7vw] h-[130vh] max-lg:h-[140vh]'>
@@ -30,18 +33,23 @@ const Application = () => {
                 styles='w-[30vw] py-[15px] mt-[60px] text-white hover:w-[35vw] hover:transition-all'
               />
             </a>
-            <a href='/'>
+            <div onClick={() => setActive(true)}>
               <Button
                 title='IPHONE'
                 styles='w-[30vw] py-[15px] mt-[15px] text-white hover:w-[35vw] hover:transition-all'
               />
-            </a>
+            </div>
           </div>
         </div>
       </div>
       <div className='mt-[40vh] flex justify-center ml-[-10vw]'>
         <Footer />
       </div>
+      <AppModal
+        active={active}
+        setActive={setActive}
+        title={"ПРИЛОЖЕНИЕ CHILL ZONE НА IPHONE"}
+      />
     </div>
   );
 };

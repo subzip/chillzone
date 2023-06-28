@@ -103,8 +103,8 @@ const UpdateLiquid = ({
   console.log(result);
   return (
     <div>
-      <div className='flex flex-col text-white text-[20px] text-center gap-[3px] items-center justify-center'>
-        <span className='ml-[1vw]'>Название:</span>
+      <div className='flex flex-col text-white text-[20px] text-center gap-[3px] items-center justify-center max-2xl:text-[16px]'>
+        <span className='ml-[0vw]'>Название:</span>
 
         <div className='w-[30vw] ml-[1vw]'>
           <Input
@@ -117,7 +117,7 @@ const UpdateLiquid = ({
           />
         </div>
 
-        <div className='text-white ml-[20px] mt-[10px]'>
+        <div className='text-white ml-[20px] mt-[5px]'>
           Доступно:
           <Checkbox
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -128,7 +128,7 @@ const UpdateLiquid = ({
           />
         </div>
 
-        <div className='text-white ml-[20px] mt-[10px]'>
+        <div className='text-white ml-[20px] mt-[5px]'>
           Объем баночки:
           <Input
             placeholder='Объем'
@@ -140,7 +140,7 @@ const UpdateLiquid = ({
           />
         </div>
 
-        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center'>
+        <div className='text-white text-[20px] ml-[20px] mt-[5px] flex items-center max-2xl:text-[16px]'>
           Тип никотина:
           <div className='w-[11vw] ml-[1vw]'>
             <Input
@@ -163,7 +163,7 @@ const UpdateLiquid = ({
             />
           </div>
         </div>
-        <div className='text-white mt-[10px] flex flex-col text-[20px] text-center'>
+        <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
           <span className='ml-[1vw]'>Вкусы:</span>
 
           <div className='w-[30vw] ml-[1vw]'>
@@ -177,7 +177,7 @@ const UpdateLiquid = ({
             />
           </div>
         </div>
-        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center'>
+        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px]'>
           Цена:
           <div className='w-[11vw] ml-[1vw]'>
             <Input
@@ -200,7 +200,7 @@ const UpdateLiquid = ({
             />
           </div>
         </div>
-        <div className='text-white mt-[10px] flex flex-col text-[20px] text-center'>
+        <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
           <span className='ml-[1vw]'>Ссылка на картинку:</span>
 
           <div className='w-[30vw] ml-[1vw]'>
