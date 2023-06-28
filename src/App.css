@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 20vw);
+  grid-template-rows: repeat(5, 20vh);
+
+  grid-template-areas:
+    "nav main main main main"
+    "nav main main main main"
+    "nav main main main main"
+    "nav main main main main"
+    "nav main main main main";
+}
+
+@media screen and (max-width: 1300px) {
+  .App {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: repeat(5, 20vw);
+    grid-template-rows: repeat(5, 20vh);
+    grid-template-areas:
+      "nav main main main main"
+      "nav main main main main"
+      "nav main main main main"
+      "nav main main main main"
+      "nav main main main main";
+  }
+  .main {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1218px) {
+  .App {
+    grid-template-areas:
+      "main main main main main"
+      "main main main main main"
+      "main main main main main"
+      "main main main main main"
+      "main main main main main";
+  }
+}
+
+.header {
+  grid-area: hd;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.main {
+  grid-area: main;
+}
+
+.svg-telegram img {
+  cursor: pointer;
+  z-index: 44;
+}
+
+.swipper-button {
+  margin-left: 250px;
+}
+
+.nav__item {
+  height: 10h;
+  text-align: center;
+
+  border-bottom: 3px #373737 solid;
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+.nav___item {
+  height: 10h;
+  text-align: center;
+  width: 7vw;
+  border-bottom: 3px #373737 solid;
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+.nav__item:hover {
+  transition: 1s;
+  color: rgb(255, 241, 0);
+  border-bottom: 3px rgb(255, 241, 0) solid;
+}
+
+.active {
+  border: none;
+  background-color: rgb(255, 241, 0);
+  color: black;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.modal.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.modal__content {
+  padding: 20px;
+  background-color: #181818;
+}
+
+.none {
+  display: none;
+}
+
+.hover:hover {
+  background-color: rgb(255, 241, 0) !important;
+}
