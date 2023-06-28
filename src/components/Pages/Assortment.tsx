@@ -104,7 +104,7 @@ const Assortment = () => {
       <Nav setType={setType} />
       <div>
         {type === 1 &&
-          disposables.data?.map((el: DisposableProps) => (
+          disposables.data.map((el: DisposableProps) => (
             <Disposable
               key={el._id}
               _id={el._id}
@@ -119,7 +119,7 @@ const Assortment = () => {
             />
           ))}
         {type === 2 &&
-          liquid.data?.map((el: LiquidProps) => (
+          liquid.data.map((el: LiquidProps) => (
             <Liquid
               key={el._id}
               _id={el._id}
@@ -133,7 +133,7 @@ const Assortment = () => {
             />
           ))}
         {type === 3 &&
-          pod.data?.map((el: PodProps) => (
+          pod.data.map((el: PodProps) => (
             <Pod
               key={el._id}
               _id={el._id}
@@ -145,7 +145,7 @@ const Assortment = () => {
             />
           ))}
         {type === 4 &&
-          cons.data?.map((el: ConsumblesProps) => (
+          cons.data.map((el: ConsumblesProps) => (
             <Consumbles
               key={el._id}
               _id={el._id}
@@ -157,7 +157,7 @@ const Assortment = () => {
             />
           ))}
         {type === 5 &&
-          niko.data?.map((el: NikoProps) => (
+          niko.data.map((el: NikoProps) => (
             <Niko
               key={el._id}
               _id={el._id}
@@ -169,7 +169,7 @@ const Assortment = () => {
             />
           ))}
         {type === 6 &&
-          snus.data?.map((el: SnusProps) => (
+          snus.data.map((el: SnusProps) => (
             <Snus
               key={el._id}
               _id={el._id}
