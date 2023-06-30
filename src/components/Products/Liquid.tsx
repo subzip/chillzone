@@ -76,7 +76,7 @@ const Liquid = ({
             </span>
           </div>
         </div>
-        <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw]  max-sm:w-[5vw]' />
+        <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw]  max-sm:w-[65vw]' />
         <div className='flex gap-[15vw] mt-[2vh] items-center  max-xl:flex-col max-xl:gap-[15px]'>
           <p className='text-gray font-semibold'>
             {price.map((el) => (
