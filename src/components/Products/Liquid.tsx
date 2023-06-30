@@ -31,7 +31,7 @@ const Liquid = ({
 
   return (
     <div className='flex w-[65vw] justify-center ml-[6vw] mt-[5vh] max-xl:w-[80vw] max-xl:ml-[14vw]  max-xl:items-center max-sm:ml-[30px] max-xl:flex-col-reverse'>
-      <div className='flex w-[40vw] flex-col'>
+      <div className='flex w-[40vw] flex-col max-sm:w-[70vw]'>
         <div>
           <div className='flex items-center justify-between max-sm:flex-wrap max-xl:justify-center'>
             <h1 className='text-white text-[25px] font-bold'>{title}</h1>
@@ -76,7 +76,7 @@ const Liquid = ({
             </span>
           </div>
         </div>
-        <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw]  max-sm:w-[55vw]' />
+        <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw]  max-sm:w-[5vw]' />
         <div className='flex gap-[15vw] mt-[2vh] items-center  max-xl:flex-col max-xl:gap-[15px]'>
           <p className='text-gray font-semibold'>
             {price.map((el) => (
