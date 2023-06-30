@@ -2,6 +2,7 @@ import React from "react";
 import Line from "../Line";
 import Card from "../Card";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const Minsk = [
   {
@@ -92,40 +93,44 @@ const Orsha = [
 ];
 
 const Retail = () => {
+  const size = window.screen.width;
   return (
-    <div className='main bg-black pt-[20vh] h-[210vh]'>
-      <h2 className='text-white text-[55px] text-center ml-[-10vw] font-semibold'>
+    <div className='main bg-black pt-[20vh] h-[210vh] max-xl:h-fit overflow-x-hidden max-sm:pt-[10vh]'>
+      <div className='ml-[0vw] mt-[-10vh]'>
+        {size < 1218 && <Navbar styles='mt-[90vh]' />}
+      </div>
+      <h2 className='text-white text-[50px] text-center ml-[-10vw] font-semibold max-sm:text-[25px]'>
         Продавцы в розницу:
       </h2>
       <div className='flex justify-center ml-[-10vw] mt-[1vh]'>
         <Line styles='w-[15vw]' />
       </div>
-      <div className='border-[4px] rounded-3xl border-darkgray h-[30vh] flex justify-center flex-col  ml-[7vw] w-[55vw]  mt-[5vh]'>
-        <h2 className='text-white text-center text-[35px] font-semibold'>
+      <div className='border-[4px] rounded-3xl border-darkgray h-[30vh] flex justify-center flex-col  ml-[7vw] w-[55vw]  mt-[5vh] max-xl:ml-[20vw] max-sm:w-[85vw] max-sm:ml-[5vw]'>
+        <h2 className='text-white text-center text-[35px] font-semibold max-sm:text-[20px]'>
           Обозначения приписок:
         </h2>
-        <div className='border-t-[2px]  border-dashed w-[15vw] border-darkgray ml-[20vw] mt-[1vh]' />
-        <div className='flex gap-[30px] justify-around mt-[5vh]'>
+        <div className='border-t-[2px]  border-dashed w-[15vw] border-darkgray ml-[20vw] mt-[1vh] max-sm:w-[50vw]' />
+        <div className='flex gap-[30px] justify-around mt-[5vh] max-xl:flex-col max-sm:items-center'>
           <div>
-            <span className='text-white font-semibold text-[25px]'>
+            <span className='text-white font-semibold text-[25px] max-xl:text-[18px]'>
               Хорошие продавцы ↗
             </span>
-            <span className='text-pink font-bold align-top text-[20px]'>
+            <span className='text-pink font-bold align-top text-[18px]'>
               FINE
             </span>
           </div>
           <div>
-            <span className='text-white font-semibold text-[25px] mr-[5px]'>
+            <span className='text-white font-semibold text-[25px] mr-[5px] max-xl:text-[18px]'>
               Лучшие продавцы ↗
             </span>
-            <span className='text-yellow font-bold align-top text-[20px]'>
+            <span className='text-yellow font-bold align-top text-[18px]'>
               VIP
             </span>
           </div>
         </div>
-        <div className='border-t-[2px] border-dotted  border-darkgray mx-[1vw] mt-[5vh]' />
+        <div className='border-t-[2px] border-dotted  border-darkgray mx-[1vw] mt-[5vh] max-sm:hidden' />
       </div>
-      <div className='flex flex-wrap gap-[30px] justify-center ml-[-10vw] mt-[7vh]'>
+      <div className='flex flex-wrap gap-[30px] justify-center ml-[-10vw] mt-[7vh] max-xl:flex-col max-xl:ml-0 max-xl:items-center'>
         <Card
           title='Минск'
           img='https://i.1.creatium.io/a0/f1/24/a9e30ca2da6107981f270cc8bc626c3cbc/izobrajenie_2023_04_04_235147814.png'

@@ -5,9 +5,10 @@ import burgerpng from "../../assets/burger.svg";
 interface NavbarProps {
   click?: boolean;
   setClick?: React.Dispatch<React.SetStateAction<boolean>>;
+  styles?: string;
 }
 
-const Navbar = ({ click, setClick }: NavbarProps) => {
+const Navbar = ({ styles }: NavbarProps) => {
   const [active, setActive] = useState(true);
   const size = window.screen.width;
 
@@ -15,11 +16,11 @@ const Navbar = ({ click, setClick }: NavbarProps) => {
     return (
       <div className=''>
         <nav
-          className={` flex flex-col  bg-black w-[65vw] text-white h-[100vh] justify-between  fixed z-50  ${
+          className={` flex flex-col  bg-black w-[65vw] text-white h-[100vh] justify-between  fixed z-50 mt-0  ${
             active ? "max-xl:hidden" : ""
           }`}
         >
-          <div className='pt-[25px] pl-[35px] text-yellow'>
+          <div className='pt-[0px] pl-[35px] text-white'>
             <h1 className='text-white font-bold ml-[0px] mt-[15px] mb-[35px] font-mono  text-[25px] max-lg:text-[20px]'>
               <span className='text-yellow'>CHILL</span>
               <strong className='font-bold'>
@@ -56,12 +57,13 @@ const Navbar = ({ click, setClick }: NavbarProps) => {
           </div>
 
           <div className='pl-[25px] text-[17px] font-bold pb-[20px] '>
-            <p className='mb-[15px] cursor-pointer'>🤓 Поддержка</p>
-            <span className='cursor-pointer'>🤟 chill-zone.store</span>
+            <p className='mb-[15px] cursor-pointer'>
+              <Link to='/support'>🤓 Поддержка</Link>
+            </p>
           </div>
         </nav>
         <div
-          className={`text-white z-100 fixed h-[15px] cursor-pointer mt-[110%]  ${
+          className={`text-white z-100 fixed h-[15px] cursor-pointer ${styles} ${
             active ? "ml-[1vw]" : "ml-[65vw]"
           }`}
           onClick={() => setActive(!active)}
@@ -84,10 +86,10 @@ const Navbar = ({ click, setClick }: NavbarProps) => {
             <h3 className='text-gray ml-[5px] mt-[15px] text-[11px] font-bold'>
               ЗАКАЗАТЬ
             </h3>
-            <div className='font-mono font-semibold whitespace-normal cursor-pointer'>
+            <div className='font-mono font-semibold whitespace-normal cursor-pointer hover:text-darkyellow hover:font-semibold'>
               <Link to='/assortment'>Ассортимент</Link>
             </div>
-            <div className='font-mono font-semibold whitespace-normal cursor-pointer'>
+            <div className='font-mono font-semibold whitespace-normal cursor-pointer hover:text-darkyellow hover:font-semibold'>
               <Link to='/retail'>Розница CZ</Link>
             </div>
           </div>
@@ -95,19 +97,19 @@ const Navbar = ({ click, setClick }: NavbarProps) => {
             <h3 className='text-gray ml-[5px] mt-[5px] text-[11px] font-bold'>
               ОСНОВНОЕ
             </h3>
-            <div className='font-mono font-semibold whitespace-normal cursor-pointer'>
+            <div className='font-mono font-semibold whitespace-normal cursor-pointer hover:text-darkyellow hover:font-semibold'>
               <Link to='/'>Главная страница</Link>
             </div>
-            <div className='font-mono font-semibold whitespace-normal cursor-pointer'>
+            <div className='font-mono font-semibold whitespace-normal cursor-pointer hover:text-darkyellow hover:font-semibold'>
               <Link to='/rules'>Основные правила</Link>
             </div>
-            <div className='font-mono font-semibold whitespace-normal cursor-pointer'>
+            <div className='font-mono font-semibold whitespace-normal cursor-pointer hover:text-darkyellow hover:font-semibold'>
               <Link to='/app'>Приложение CZ</Link>
             </div>
           </div>
         </div>
 
-        <div className='pl-[25px] text-[17px] font-bold pb-[20px] '>
+        <div className='pl-[25px] text-[17px] font-bold pb-[20px] hover:text-darkyellow hover:font-semibold'>
           <p className='mb-[1px] cursor-pointer'>
             <Link to='/support'>🤓 Поддержка</Link>
           </p>

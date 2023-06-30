@@ -24,6 +24,7 @@ module.exports = {
       lightgray: "#cdcdcd",
       lightgreen: "#4f7b60",
       light: "#9a9a9a",
+      darkyellow: "#827c0c",
     },
     fontFamily: {
       sans: ["Roboto"],

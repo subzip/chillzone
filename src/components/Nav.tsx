@@ -17,15 +17,15 @@ const Nav = ({ setType }: NavProps) => {
 
   const changeActive = (e: any) => {
     if (el) {
-      el.className = "border-darkgray nav__item";
+      el.className = "border-darkgray nav__item px-[15px]";
     }
 
-    e.currentTarget.className = "border-darkgray nav___item active";
+    e.currentTarget.className = "border-darkgray nav__item active px-[15px]";
     console.log(e.currentTarget);
     setEl(e.currentTarget);
   };
   return (
-    <div className='flex nav__ text-light justify-center gap-[10px] cursor-pointer mt-[4vh] ml-[5vw] items-center flex-wrap w-[60vw] max-xl:gap-[70px] max-xl:w-[80vw]'>
+    <div className='flex nav__ text-light justify-center gap-[10px] cursor-pointer mt-[4vh] ml-[5vw] items-center flex-wrap w-[60vw] max-xl:gap-[10px] max-xl:w-[80vw] '>
       <div
         className={window.localStorage.getItem("token") ? "" : "none"}
         onClick={() => setActive(true)}
@@ -34,7 +34,7 @@ const Nav = ({ setType }: NavProps) => {
       </div>
       <AddModal active={active} setActive={setActive} id={""} />
       <div
-        className='first nav__item active'
+        className='first nav__item active px-[15px]'
         onClick={(e: any) => {
           changeActive(e);
           setType(1);
@@ -43,7 +43,7 @@ const Nav = ({ setType }: NavProps) => {
         Одноразки
       </div>
       <div
-        className=' border-darkgray nav__item'
+        className=' border-darkgray nav__item px-[15px] max-xl:px-[10px]'
         onClick={(e: any) => {
           changeActive(e);
           setType(2);
@@ -52,7 +52,7 @@ const Nav = ({ setType }: NavProps) => {
         Жидкости
       </div>
       <div
-        className=' border-darkgray nav__item'
+        className=' border-darkgray nav__item px-[15px] max-xl:px-[10px]'
         onClick={(e: any) => {
           changeActive(e);
           setType(3);
@@ -61,7 +61,7 @@ const Nav = ({ setType }: NavProps) => {
         Поды
       </div>
       <div
-        className=' border-darkgray nav__item'
+        className=' border-darkgray nav__item px-[15px] max-xl:px-[10px]'
         onClick={(e: any) => {
           changeActive(e);
           setType(4);
@@ -70,7 +70,7 @@ const Nav = ({ setType }: NavProps) => {
         Расходники
       </div>
       <div
-        className=' border-darkgray nav__item'
+        className=' border-darkgray nav__item px-[15px] max-xl:px-[10px]'
         onClick={(e: any) => {
           changeActive(e);
           setType(5);
@@ -79,7 +79,7 @@ const Nav = ({ setType }: NavProps) => {
         Никобустеры
       </div>
       <div
-        className=' border-darkgray nav__item'
+        className=' border-darkgray nav__item px-[15px] max-xl:px-[10px]'
         onClick={(e: any) => {
           changeActive(e);
           setType(6);
@@ -88,7 +88,7 @@ const Nav = ({ setType }: NavProps) => {
         Снюс
       </div>
       <div
-        className=' border-darkgray nav__item'
+        className=' border-darkgray nav__item px-[15px] max-xl:px-[10px]'
         onClick={(e: any) => {
           changeActive(e);
           setType(7);

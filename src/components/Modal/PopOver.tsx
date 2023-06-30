@@ -8,7 +8,7 @@ const PopOver = ({ arr }: PopOverProps) => {
   return (
     <div className='flex gap-[20px] bg-darkgray flex-col items-start justify-between py-[15px] px-[10px]'>
       {arr.map((el: any) => (
-        <div className='flex gap-[50px] justify-between'>
+        <div className='flex gap-[50px] justify-between max-sm:flex-col max-sm:gap-[10px]'>
           <div className='flex gap-[10px] items-center  w-[350px]'>
             <div>
               <img src={el.imageUrl} alt='' className='w-[35px] rounded-full' />

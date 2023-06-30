@@ -1,9 +1,9 @@
-import { Checkbox, TextField } from "@mui/material";
+import { Checkbox } from "@mui/material";
 
 import React, { useState, useEffect } from "react";
 import { Input } from "antd";
 import Button from "../Button";
-import { addDisposable, getOneDisposable, updateDisposable } from "../../utils";
+import { getOneDisposable, updateDisposable } from "../../utils";
 
 interface updatePostProps {
   active: boolean;
@@ -115,8 +115,8 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
             style={{}}
           />
         </div>
-        <div className='flex'>
-          <div className='text-white ml-[20px] mt-[0px] max-2xl:text-[16px]'>
+        <div className='flex max-sm:flex-col'>
+          <div className='text-white ml-[20px] mt-[0px] max-2xl:text-[16px] max-sm:flex max-sm:items-center'>
             Доступно:
             <Checkbox
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -126,7 +126,7 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
               style={{ color: "white" }}
             />
           </div>
-          <div className='text-white ml-[20px] mt-[0px] max-2xl:text-[16px]'>
+          <div className='text-white ml-[20px] mt-[0px] max-2xl:text-[16px] max-sm:flex max-sm:items-center'>
             Есть зарядка?
             <Checkbox
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -151,9 +151,9 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
             />
           </div>
         </div>
-        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px]'>
+        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px] max-sm:flex-col max-sm:gap-[10px]'>
           Тип никотина:
-          <div className='w-[11vw] ml-[1vw]'>
+          <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
             <Input
               placeholder='Процент никотина'
               value={percent}
@@ -163,7 +163,7 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
               style={{}}
             />
           </div>
-          <div className='w-[11vw] ml-[1vw]'>
+          <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
             <Input
               placeholder='Тип никотина'
               value={type}
@@ -177,7 +177,7 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
         <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
           <span className='ml-[1vw]'>Вкусы("apple" "pineapple"):</span>
 
-          <div className='w-[30vw] ml-[1vw]'>
+          <div className='w-[30vw] ml-[1vw] max-sm:ml-[20vw]'>
             <Input
               placeholder='Вкусы'
               value={tastes}
@@ -188,9 +188,9 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
             />
           </div>
         </div>
-        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px]'>
+        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px] max-sm:flex-col max-sm:gap-[10px]'>
           Цена("10" "20"):
-          <div className='w-[11vw] ml-[1vw]'>
+          <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
             <Input
               placeholder='Количество'
               value={priceKeys}
@@ -200,7 +200,7 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
               style={{}}
             />
           </div>
-          <div className='w-[11vw] ml-[0.3vw]'>
+          <div className='w-[11vw] ml-[0.3vw] max-sm:w-[40vw]'>
             <Input
               placeholder='Цены'
               value={priceValue}
@@ -214,7 +214,7 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
         <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
           <span className='ml-[1vw]'>Ссылка на картинку:</span>
 
-          <div className='w-[30vw] ml-[1vw]'>
+          <div className='w-[30vw] ml-[1vw] max-sm:ml-[10vw]'>
             <Input
               placeholder='Картинка'
               value={imageUrl}
@@ -225,10 +225,13 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
             />
           </div>
         </div>
-        <div className='flex justify-center mt-[5vh]' onClick={updatePost}>
+        <div
+          className='flex justify-center mt-[5vh] max-sm:mt-[2vh]'
+          onClick={updatePost}
+        >
           <Button
             title='Отправить'
-            styles='bg-yellow w-[220px] py-[5px] text-[25px]'
+            styles='bg-yellow w-[220px] py-[5px] text-[25px] max-sm:w-[170px]'
           />
         </div>
       </div>

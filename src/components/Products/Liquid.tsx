@@ -30,10 +30,10 @@ const Liquid = ({
   };
 
   return (
-    <div className='flex w-[65vw] justify-center ml-[6vw] mt-[5vh] max-xl:w-[80vw] max-xl:ml-[14vw] max-xl:flex-col max-xl:items-center'>
+    <div className='flex w-[65vw] justify-center ml-[6vw] mt-[5vh] max-xl:w-[80vw] max-xl:ml-[14vw]  max-xl:items-center max-sm:ml-[30px] max-xl:flex-col-reverse'>
       <div className='flex w-[40vw] flex-col'>
         <div>
-          <div className='flex items-center justify-between'>
+          <div className='flex items-center justify-between max-sm:flex-wrap max-xl:justify-center'>
             <h1 className='text-white text-[25px] font-bold'>{title}</h1>
             <div
               className={
@@ -76,8 +76,8 @@ const Liquid = ({
             </span>
           </div>
         </div>
-        <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw]' />
-        <div className='flex gap-[15vw] mt-[2vh] items-center  max-xl:flex-col max-xl:gap-[20px]'>
+        <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw]  max-sm:w-[55vw]' />
+        <div className='flex gap-[15vw] mt-[2vh] items-center  max-xl:flex-col max-xl:gap-[15px]'>
           <p className='text-gray font-semibold'>
             {price.map((el) => (
               <span key={`${Object.keys(el)}`}>
@@ -94,7 +94,7 @@ const Liquid = ({
           </div>
         </div>
       </div>
-      <div className='mr-[5vw] max-xl:mt-[50px]'>
+      <div className='mr-[5vw] max-sm:ml-[5vw]'>
         <img src={imageUrl} alt='' className='w-[325px] h-[325px]' />
       </div>
       <Modal

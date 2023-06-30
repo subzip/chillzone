@@ -27,20 +27,20 @@ const ModifyModal = ({
       onClick={() => setActive(false)}
     >
       <div
-        className='modal__content flex flex-col items-center cursor-pointer h-[87%] w-[60%]'
+        className='modal__content flex flex-col items-center cursor-pointer h-[87%] w-[60%] max-sm:w-[85vw]'
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={deletepng}
           alt=''
-          className='absolute ml-[60vw] mt-[-3vh]'
+          className='absolute ml-[60vw] mt-[-3vh] max-sm:ml-[80vw] max-sm:mt-[-4vh]'
           onClick={() => setActive(false)}
         />
-        <h1 className='text-white text-[35px] font-semibold tracking-wider'>
+        <h1 className='text-white text-[35px] font-semibold tracking-wider max-lg:text-[25px]'>
           Обновить товар:
         </h1>
         <Line styles='bg-yellow w-[10vw] h-[2px] mt-[10px]' />
-        <div className='border-t-yellow border-[1px] border-gray border-t-[2px] w-[42vw] h-[75vh] mt-[5vh]'>
+        <div className='border-t-yellow border-[1px] border-gray border-t-[2px] w-[42vw] h-[75vh] mt-[5vh]  max-sm:w-[75vw]'>
           {modalType === 1 && (
             <UpdateDisposable
               active={active}

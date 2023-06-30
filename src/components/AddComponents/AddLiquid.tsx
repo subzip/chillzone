@@ -97,10 +97,10 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
         </div>
       </div>
 
-      <div className='text-white text-[1.1rem] ml-[20px] mt-[5px] flex items-center max-2xl:text-[16px]'>
+      <div className='text-white text-[1.1rem] ml-[20px] mt-[5px] flex items-center max-2xl:text-[16px]  max-sm:flex-col max-sm:gap-[10px]'>
         <span>Тип никотина:</span>
 
-        <div className='w-[11vw] ml-[1vw]'>
+        <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Процент никотина(20мг/50мг)'
             value={amount}
@@ -110,7 +110,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
             style={{}}
           />
         </div>
-        <div className='w-[11vw] ml-[1vw]'>
+        <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Тип никотина'
             value={type}
@@ -124,7 +124,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
       <div className='text-white mt-[5px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Вкусы:</span>
 
-        <div className='w-[30vw] ml-[1vw]'>
+        <div className='w-[30vw] ml-[1vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Вкусы("apple" "pineapple")'
             value={tastes}
@@ -135,10 +135,10 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
           />
         </div>
       </div>
-      <div className='text-white text-[1.1rem] ml-[20px] mt-[5px] flex items-center max-2xl:text-[16px]'>
+      <div className='text-white text-[1.1rem] ml-[20px] mt-[5px] flex items-center max-2xl:text-[16px] max-sm:flex-col max-sm:gap-[5px]'>
         <span>Цена:</span>
 
-        <div className='w-[11vw] ml-[1vw]'>
+        <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Количество(10 20 50)'
             value={priceKeys}
@@ -148,7 +148,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
             style={{}}
           />
         </div>
-        <div className='w-[11vw] ml-[0.3vw]'>
+        <div className='w-[11vw] ml-[0.3vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Цены(15 14 13)'
             value={priceValue}
@@ -162,7 +162,7 @@ const AddLiquid = ({ setActive, modalType }: AddLiquidProps) => {
       <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Ссылка на картинку:</span>
 
-        <div className='w-[30vw] ml-[1vw]'>
+        <div className='w-[30vw] ml-[1vw] max-sm:ml-[10vw]'>
           <Input
             placeholder='Картинка'
             value={imageUrl}

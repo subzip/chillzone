@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://thoughtful-windbreaker-cow.cyclic.app",
+  baseURL: "https://chillzone-backend.onrender.com",
 });
 
 instance.interceptors.request.use((config) => {

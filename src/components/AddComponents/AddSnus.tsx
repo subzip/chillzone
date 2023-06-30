@@ -49,8 +49,8 @@ const AddSnus = ({ setActive, modalType }: AddSnusProps) => {
   };
   console.log(result);
   return (
-    <div className='flex flex-col items-center ml-[-2vw]'>
-      <div className='flex flex-col text-white text-[20px] text-center gap-[3px]'>
+    <div className='flex flex-col items-center ml-[-2vw] max-sm:mt-[5vh]'>
+      <div className='flex flex-col text-white text-[20px] text-center gap-[3px] max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Название:</span>
 
         <div className='w-[30vw] ml-[1vw]'>
@@ -65,7 +65,7 @@ const AddSnus = ({ setActive, modalType }: AddSnusProps) => {
         </div>
       </div>
 
-      <div className='text-white ml-[20px] mt-[10px] text-center'>
+      <div className='text-white ml-[20px] mt-[10px] text-center max-2xl:text-[16px]'>
         Доступно:
         <Checkbox
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -75,7 +75,7 @@ const AddSnus = ({ setActive, modalType }: AddSnusProps) => {
         />
       </div>
 
-      <div className='flex flex-col text-white text-[20px] text-center gap-[3px]'>
+      <div className='flex flex-col text-white text-[20px] text-center gap-[3px] max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Количество:</span>
         <div className='w-[30vw] ml-[1vw]'>
           <Input
@@ -89,10 +89,10 @@ const AddSnus = ({ setActive, modalType }: AddSnusProps) => {
         </div>
       </div>
 
-      <div className='text-white text-[1.1rem] ml-[20px] mt-[10px] flex items-center'>
+      <div className='text-white text-[1.1rem] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px] max-sm:flex-col max-sm:gap-[5px]'>
         <span>Цена:</span>
 
-        <div className='w-[11vw] ml-[1vw]'>
+        <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Количество(10 20 50)'
             value={priceKeys}
@@ -102,7 +102,7 @@ const AddSnus = ({ setActive, modalType }: AddSnusProps) => {
             style={{}}
           />
         </div>
-        <div className='w-[11vw] ml-[0.3vw]'>
+        <div className='w-[11vw] ml-[0.3vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Цены(15 14 13)'
             value={priceValue}
@@ -113,10 +113,10 @@ const AddSnus = ({ setActive, modalType }: AddSnusProps) => {
           />
         </div>
       </div>
-      <div className='text-white mt-[10px] flex flex-col text-[20px] text-center'>
+      <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Ссылка на картинку:</span>
 
-        <div className='w-[30vw] ml-[1vw]'>
+        <div className='w-[30vw] ml-[1vw] max-sm:ml-[10vw]'>
           <Input
             placeholder='Картинка'
             value={imageUrl}

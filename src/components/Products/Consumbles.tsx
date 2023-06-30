@@ -27,10 +27,10 @@ const Consumbles = ({
 
   console.log(_id);
   return (
-    <div className='flex w-[65vw] justify-center ml-[6vw] mt-[5vh] max-xl:w-[80vw] max-xl:ml-[14vw] max-xl:flex-col max-xl:items-center'>
-      <div className='flex w-[40vw] flex-col'>
+    <div className='flex w-[65vw] justify-center ml-[6vw] mt-[5vh] max-xl:w-[80vw] max-xl:ml-[14vw] max-xl:items-center max-sm:ml-[30px] max-xl:flex-col-reverse'>
+      <div className='flex w-[40vw] flex-col max-sm:w-[65vw]'>
         <div>
-          <div className='flex items-center justify-between'>
+          <div className='flex items-center justify-between max-sm:flex-wrap max-xl:justify-center'>
             <h1 className='text-white text-[25px] font-bold'>{title}</h1>
             <div
               className={

@@ -124,9 +124,9 @@ const UpdateCons = ({ id, active, setActive, modalType }: UpdateConsProps) => {
           />
         </div>
 
-        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center'>
+        <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center max-sm:flex-col max-sm:gap-[10px]'>
           Цена:
-          <div className='w-[11vw] ml-[1vw]'>
+          <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
             <Input
               placeholder='Количество(10 20 50)'
               value={priceKeys}
@@ -136,7 +136,7 @@ const UpdateCons = ({ id, active, setActive, modalType }: UpdateConsProps) => {
               style={{}}
             />
           </div>
-          <div className='w-[11vw] ml-[0.3vw]'>
+          <div className='w-[11vw] ml-[0.3vw] max-sm:w-[40vw]'>
             <Input
               placeholder='Цены(15 14 13)'
               value={priceValue}
@@ -150,7 +150,7 @@ const UpdateCons = ({ id, active, setActive, modalType }: UpdateConsProps) => {
         <div className='text-white mt-[10px] flex flex-col text-[20px] text-center'>
           <span className='ml-[1vw]'>Ссылка на картинку:</span>
 
-          <div className='w-[30vw] ml-[1vw]'>
+          <div className='w-[30vw] ml-[1vw] max-sm:ml-[15vw]'>
             <Input
               placeholder='Картинка'
               value={imageUrl}
@@ -164,7 +164,7 @@ const UpdateCons = ({ id, active, setActive, modalType }: UpdateConsProps) => {
         <div className='flex justify-center mt-[5vh]' onClick={updatePost}>
           <Button
             title='Отправить'
-            styles='bg-yellow w-[220px] py-[5px] text-[25px]'
+            styles='bg-yellow w-[220px] py-[5px] text-[25px] max-sm:w-[170px]'
           />
         </div>
       </div>

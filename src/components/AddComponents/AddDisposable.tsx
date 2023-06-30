@@ -74,8 +74,8 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
           />
         </div>
       </div>
-      <div className='flex items-center'>
-        <div className='text-white ml-[20px]  text-center'>
+      <div className='flex items-center max-sm:flex-col'>
+        <div className='text-white ml-[20px]  text-center max-sm:flex max-sm:items-center'>
           Доступно:
           <Checkbox
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -84,7 +84,7 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             style={{ color: "white" }}
           />
         </div>
-        <div className='text-white ml-[20px]'>
+        <div className='text-white ml-[20px] max-sm:flex max-sm:items-center'>
           Есть зарядка?
           <Checkbox
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -109,10 +109,10 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
         </div>
       </div>
 
-      <div className='text-white text-[1.1rem] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px]'>
+      <div className='text-white text-[1.1rem] ml-[20px] mt-[10px] flex items-center max-2xl:text-[16px] max-sm:flex-col max-sm:gap-[10px]'>
         <span>Тип никотина:</span>
 
-        <div className='w-[11vw] ml-[1vw]'>
+        <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Процент никотина(50)'
             value={percent}
@@ -122,7 +122,7 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             style={{ height: "30px" }}
           />
         </div>
-        <div className='w-[11vw] ml-[1vw]'>
+        <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Тип никотина'
             value={type}
@@ -147,10 +147,10 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
           />
         </div>
       </div>
-      <div className='text-white text-[1.1rem] ml-[20px] mt-[10px] flex items-center'>
+      <div className='text-white text-[1.1rem] ml-[20px] mt-[10px] flex items-center max-sm:flex-col max-sm:gap-[5px]'>
         <span>Цена:</span>
 
-        <div className='w-[11vw] ml-[1vw]'>
+        <div className='w-[11vw] ml-[1vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Количество(10 20 50)'
             value={priceKeys}
@@ -160,7 +160,7 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
             style={{ height: "30px" }}
           />
         </div>
-        <div className='w-[11vw] ml-[0.3vw]'>
+        <div className='w-[11vw] ml-[0.3vw] max-sm:w-[40vw]'>
           <Input
             placeholder='Цены(15 14 13)'
             value={priceValue}
@@ -174,7 +174,7 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
       <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
         <span className='ml-[1vw]'>Ссылка на картинку:</span>
 
-        <div className='w-[30vw] ml-[1vw]'>
+        <div className='w-[30vw] ml-[1vw] max-sm:ml-[10vw]'>
           <Input
             placeholder='Картинка'
             value={imageUrl}

@@ -47,7 +47,7 @@ const Auth = () => {
     );
   }
   return (
-    <div className='main bg-black flex justify-center items-center ml-[-10vw] text-white'>
+    <div className='main bg-black flex justify-center items-center ml-[-10vw] text-white max-sm:ml-0'>
       <Form
         name='basic'
         labelCol={{
@@ -96,7 +96,7 @@ const Auth = () => {
           />
         </Form.Item>
 
-        <Form.Item
+        {/* <Form.Item
           name='remember'
           valuePropName='checked'
           wrapperCol={{
@@ -105,7 +105,7 @@ const Auth = () => {
           }}
         >
           <Checkbox style={{ color: "white" }}>Remember me</Checkbox>
-        </Form.Item>
+        </Form.Item> */}
 
         <Form.Item
           wrapperCol={{
