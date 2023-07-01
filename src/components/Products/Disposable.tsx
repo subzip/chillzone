@@ -33,7 +33,7 @@ const Disposable = ({
 
   return (
     <div className='flex w-[65vw]  justify-center ml-[6vw] mt-[5vh] max-xl:w-[80vw] max-xl:ml-[14vw]  max-xl:items-center max-sm:ml-[30px] max-xl:flex-col-reverse'>
-      <div className='flex w-[40vw] flex-col max-sm:w-[65vw]'>
+      <div className='flex w-[45vw] flex-col max-sm:w-[65vw]'>
         <div className=''>
           <div className='flex items-center justify-between max-sm:flex-wrap max-xl:justify-center'>
             <h1 className='text-white text-[25px] font-bold'>{title}</h1>
@@ -101,7 +101,7 @@ const Disposable = ({
         </div>
       </div>
       <div className='mr-[5vw] max-sm:ml-[5vw]'>
-        <img src={imageUrl} alt='' className='w-[325px] h-[325px]' />
+        <img src={imageUrl} alt='' className='w-[255px] h-[325px]' />
       </div>
       <Modal
         active={active}

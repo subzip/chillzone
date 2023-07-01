@@ -76,8 +76,12 @@ const Niko = ({
           </p>
         </div>
       </div>
-      <div className='mr-[5vw]'>
-        <img src={imageUrl} alt='' className='w-[325px] h-[325px]' />
+      <div className='mr-[5vw] '>
+        <img
+          src={imageUrl}
+          alt=''
+          className='w-[325px] h-[325px] rounded-full'
+        />
       </div>
 
       <ModifyModal
