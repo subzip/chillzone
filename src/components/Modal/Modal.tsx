@@ -16,7 +16,7 @@ const Modal = ({ active, setActive, title, tastes }: ModalProps) => {
       onClick={() => setActive(false)}
     >
       <div
-        className='modal__content flex flex-col items-center cursor-pointer'
+        className='modal__content flex flex-col items-center cursor-pointer max-xl:h-[80vh]'
         onClick={(e) => e.stopPropagation()}
       >
         <img
@@ -29,7 +29,7 @@ const Modal = ({ active, setActive, title, tastes }: ModalProps) => {
           Вкусы:
         </h1>
         <Line styles='bg-yellow w-[10vw] h-[2px] mt-[10px]' />
-        <div className='border-t-yellow border-[1px] border-gray border-t-[2px] w-[42vw] h-[55vh] mt-[5vh] max-sm:w-[75vw]'>
+        <div className='border-t-yellow border-[1px] border-gray border-t-[2px] w-[42vw]  mt-[5vh] max-sm:w-[75vw]'>
           <div className='text-yellow text-[25px] font-semibold text-center'>
             {title}
           </div>

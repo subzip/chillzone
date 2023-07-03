@@ -95,7 +95,7 @@ const Liquid = ({
         </div>
       </div>
       <div className='mr-[5vw] max-sm:ml-[5vw] w-[255px] flex justify-center max-xl:ml-[5vw]'>
-        <img src={imageUrl} alt='' className=' h-[325px]' />
+        <img src={imageUrl} alt='' className=' h-[305px]' />
       </div>
       <Modal
         active={active}

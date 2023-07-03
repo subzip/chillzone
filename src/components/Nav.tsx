@@ -20,7 +20,7 @@ const Nav = ({ setType }: NavProps) => {
       el.className = "border-darkgray nav__item px-[15px]";
     }
 
-    e.currentTarget.className = "border-darkgray nav__item active px-[15px]";
+    e.currentTarget.className = "border-darkgray nav__item active__ px-[15px]";
     console.log(e.currentTarget);
     setEl(e.currentTarget);
   };
@@ -34,7 +34,7 @@ const Nav = ({ setType }: NavProps) => {
       </div>
       <AddModal active={active} setActive={setActive} id={""} />
       <div
-        className='first nav__item active px-[15px]'
+        className='first nav__item active__ px-[15px]'
         onClick={(e: any) => {
           changeActive(e);
           setType(1);

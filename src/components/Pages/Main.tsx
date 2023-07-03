@@ -32,7 +32,7 @@ const Main = () => {
         <div className='flex items-center gap-[140px] justify-center w-[60vw] max-xl:flex-col max-xl:ml-[15vw] max-xl:gap-[30px]'>
           <div className='text-white w-[400px] mt-[15vw] max-sm:w-[200px]'>
             <Bounce>
-              <h1 className='text-[55px] font-semibold max-2xl:text-[35px] max-xl:text-center max-sm:text-[25px]'>
+              <h1 className='text-[55px] font-semibold max-2xl:text-[35px] max-xl:text-center max-sm:text-[25px] max-lg:ml-[-5vw]'>
                 <span className='text-yellow'>CHILL</span> ZONE - ПОСТАВЩИК В
                 БЕЛАРУСИ
               </h1>
