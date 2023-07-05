@@ -15,7 +15,7 @@ const Discount = () => {
 
   if (isLoading)
     return (
-      <div className='main bg-black flex justify-center items-center'>
+      <div className='main bg-black flex justify-center items-center mt-[30vh]'>
         <CircularProgress color='success' />;
       </div>
     );
