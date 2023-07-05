@@ -1,20 +1,24 @@
 import existpng from "../../assets/exist.png";
 import star from "../../assets/star.png";
 import modifypng from "../../assets/modify.png";
+import tastepng from "../../assets/taste.png";
 import notexistpng from "../../assets/notexist.png";
 import { SnusProps } from "../../types";
 import ModifyModal from "../Modal/ModifyModel";
 import { deleteSnus } from "../../utils";
 import { useState } from "react";
+import Modal from "../Modal/Modal";
 
 const Snus = ({
   _id,
   title,
   isAvaliable,
+  tastes,
   amount,
   price,
   imageUrl,
 }: SnusProps) => {
+  const [active, setActive] = useState(false);
   const [activeModify, setActiveModify] = useState(false);
 
   const deletePost = () => {
@@ -71,11 +75,25 @@ const Snus = ({
               </span>
             ))}
           </p>
+          <div
+            className='bg-yellow w-[6vw] items-center justify-center h-[4vh] flex text-center pr-[3px] rounded-full cursor-pointer mt-[2vh] shadow-button max-xl:w-[120px] max-xl:h-[50px] '
+            onClick={() => setActive(true)}
+          >
+            <img src={tastepng} alt='' />
+            <span className='ml-[2px]'>Вкусы</span>
+          </div>
         </div>
       </div>
       <div className='mr-[5vw]'>
         <img src={imageUrl} alt='' className='w-[325px] h-[325px]' />
       </div>
+
+      <Modal
+        active={active}
+        setActive={setActive}
+        title={title}
+        tastes={tastes}
+      />
 
       <ModifyModal
         active={activeModify}

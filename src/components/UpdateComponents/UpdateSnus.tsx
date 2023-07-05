@@ -14,6 +14,7 @@ interface UpdateSnusProps {
 
 const UpdateSnus = ({ id, active, setActive, modalType }: UpdateSnusProps) => {
   const [title, setTitle] = useState("");
+  const [tastes, setTastes] = useState("");
   const [amount, setAmount] = useState(0);
   const [imageUrl, setImageUrl] = useState("");
   const [priceKeys, setPriceKeys] = useState("");
@@ -39,6 +40,7 @@ const UpdateSnus = ({ id, active, setActive, modalType }: UpdateSnusProps) => {
     title,
     isAvaliable,
     amount,
+    tastes: tastes.split(" "),
     price,
     imageUrl,
   };
@@ -69,6 +71,7 @@ const UpdateSnus = ({ id, active, setActive, modalType }: UpdateSnusProps) => {
       }
 
       setPriceKeys(priceKK.join(" "));
+      setTastes(el.data.tastes.join(" "));
       setPriceValue(priceVV.join(" "));
       setImageUrl(el.data.imageUrl);
     });
@@ -123,6 +126,20 @@ const UpdateSnus = ({ id, active, setActive, modalType }: UpdateSnusProps) => {
             }
             style={{}}
           />
+        </div>
+        <div className='text-white mt-[10px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
+          <span className='ml-[1vw]'>Вкусы("apple" "pineapple"):</span>
+
+          <div className='w-[30vw] ml-[1vw] max-sm:ml-[20vw]'>
+            <Input
+              placeholder='Вкусы'
+              value={tastes}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setTastes(e.target.value)
+              }
+              style={{}}
+            />
+          </div>
         </div>
 
         <div className='text-white text-[20px] ml-[20px] mt-[10px] flex items-center max-sm:flex-col max-sm:gap-[10px]'>

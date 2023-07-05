@@ -76,6 +76,7 @@ export interface SnusProps {
   _id: string;
   title: string;
   isAvaliable: boolean;
+  tastes: Array<string>;
   amount: number;
   price: Array<object>;
   imageUrl: string;

@@ -12,6 +12,7 @@ interface AddSnusProps {
 
 const AddSnus = ({ setActive, modalType }: AddSnusProps) => {
   const [title, setTitle] = useState("");
+  const [tastes, setTastes] = useState("");
   const [amount, setAmount] = useState(0);
   const [imageUrl, setImageUrl] = useState("");
   const [priceKeys, setPriceKeys] = useState("");
@@ -37,6 +38,7 @@ const AddSnus = ({ setActive, modalType }: AddSnusProps) => {
     title,
     isAvaliable,
     amount,
+    tastes: tastes.split(" "),
     price,
     imageUrl,
   };
@@ -83,6 +85,21 @@ const AddSnus = ({ setActive, modalType }: AddSnusProps) => {
             value={amount}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setAmount(Number(e.target.value))
+            }
+            style={{}}
+          />
+        </div>
+      </div>
+
+      <div className='text-white mt-[5px] flex flex-col text-[20px] text-center max-2xl:text-[16px]'>
+        <span className='ml-[1vw]'>Вкусы:</span>
+
+        <div className='w-[30vw] ml-[1vw] max-sm:w-[40vw]'>
+          <Input
+            placeholder='Вкусы("apple" "pineapple")'
+            value={tastes}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setTastes(e.target.value)
             }
             style={{}}
           />
