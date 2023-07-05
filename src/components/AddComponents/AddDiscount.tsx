@@ -28,13 +28,6 @@ const AddDiscount = ({ setActive }: AddDiscountProps) => {
     );
   };
 
-  //   const config = {
-  //     height: "300px",
-  //     width: size > 1280 ? "600px" : "300px",
-  //     autofocus: false,
-  //     readonly: false,
-  //   };
-
   return (
     <div className='flex items-center flex-col ml-[-5vw] max-lg:ml-[-17vw]'>
       <div className='w-[30vw]  mt-[1vh] h-[5vh]'>
