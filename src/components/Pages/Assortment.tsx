@@ -109,7 +109,13 @@ const Assortment = () => {
       <Nav setType={setType} />
 
       <div>
-        <Suspense fallback={<CircularProgress color='success' />}>
+        <Suspense
+          fallback={
+            <div className='main bg-black flex justify-center items-center'>
+              <CircularProgress color='success' />;
+            </div>
+          }
+        >
           {type === 1 &&
             disposables.data.map((el: DisposableProps) => (
               <Disposable
