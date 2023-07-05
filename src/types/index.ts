@@ -80,3 +80,10 @@ export interface SnusProps {
   price: Array<object>;
   imageUrl: string;
 }
+
+export interface DiscountProps {
+  _id: string;
+  title: string;
+  imageUrl: string;
+  text: string;
+}

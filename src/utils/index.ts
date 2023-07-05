@@ -154,3 +154,28 @@ export const auth = async (fields: any) => {
   const response: any = await axios.post(`/manager`, fields);
   return response;
 };
+
+export const addDiscount = async (fields: any) => {
+  const response: any = await axios.post("/discount", fields);
+  return response;
+};
+
+export const getDiscount = async () => {
+  const response: any = await axios.get("/discount");
+  return response;
+};
+
+export const deleteDiscount = async (id: string) => {
+  const response: any = await axios.delete(`/discount/${id}`);
+  return response;
+};
+
+export const getOneDiscount = async (id: string) => {
+  const response: any = await axios.get(`/discount/${id}`);
+  return response;
+};
+
+export const updateDiscount = async (fields: any, id: string) => {
+  const response: any = await axios.patch(`/discount/${id}`, fields);
+  return response;
+};

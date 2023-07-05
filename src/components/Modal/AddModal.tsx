@@ -8,6 +8,7 @@ import AddPod from "../AddComponents/AddPod";
 import AddConsumbles from "../AddComponents/AddConsumbles";
 import AddNiko from "../AddComponents/AddNiko";
 import AddSnus from "../AddComponents/AddSnus";
+import AddDiscount from "../AddComponents/AddDiscount";
 
 interface AddModalProps {
   active: boolean;
@@ -91,6 +92,7 @@ const AddModal = ({ active, setActive, title, tastes }: AddModalProps) => {
             {type === "4" && <AddConsumbles setActive={setActive} />}
             {type === "5" && <AddNiko setActive={setActive} />}
             {type === "6" && <AddSnus setActive={setActive} />}
+            {type === "7" && <AddDiscount setActive={setActive} />}
           </div>
         </div>
       </div>
