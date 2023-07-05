@@ -1,17 +1,17 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
+import logo from "./logo.svg";
 import "./App.css";
+import Header from "./components/Pages/Header";
+import Navbar from "./components/Pages/Navbar";
+import Main from "./components/Pages/Main";
+import Rules from "./components/Pages/Rules";
 import { Routes, Route } from "react-router-dom";
-import { CircularProgress } from "@mui/material";
+import Application from "./components/Pages/Application";
+import Retail from "./components/Pages/Retail";
+import Assortment from "./components/Pages/Assortment";
 import { QueryClient, QueryClientProvider } from "react-query";
-
-const Main = lazy(() => import("./components/Pages/Main"));
-const Rules = lazy(() => import("./components/Pages/Rules"));
-const Navbar = lazy(() => import("./components/Pages/Navbar"));
-const Application = lazy(() => import("./components/Pages/Application"));
-const Retail = lazy(() => import("./components/Pages/Retail"));
-const Assortment = lazy(() => import("./components/Pages/Assortment"));
-const Support = lazy(() => import("./components/Pages/Support"));
-const Auth = lazy(() => import("./components/Pages/Auth"));
+import Auth from "./components/Pages/Auth";
+import Support from "./components/Pages/Support";
 
 const queryClient = new QueryClient();
 
@@ -23,103 +23,17 @@ function App() {
       {size > 1218 && <Navbar />}
 
       <Routes>
-        <Route
-          path='/'
-          element={
-            <Suspense
-              fallback={
-                <div className='main bg-black flex justify-center items-center'>
-                  <CircularProgress color='success' />;
-                </div>
-              }
-            >
-              <Main />
-            </Suspense>
-          }
-        />
-        <Route
-          path='/rules'
-          element={
-            <Suspense
-              fallback={
-                <div className='main bg-black flex justify-center items-center'>
-                  <CircularProgress color='success' />;
-                </div>
-              }
-            >
-              <Rules />
-            </Suspense>
-          }
-        />
-        <Route
-          path='/app'
-          element={
-            <Suspense
-              fallback={
-                <div className='main bg-black flex justify-center items-center'>
-                  <CircularProgress color='success' />;
-                </div>
-              }
-            >
-              <Application />
-            </Suspense>
-          }
-        />
-        <Route
-          path='/retail'
-          element={
-            <Suspense
-              fallback={
-                <div className='main bg-black flex justify-center items-center'>
-                  <CircularProgress color='success' />;
-                </div>
-              }
-            >
-              <Retail />
-            </Suspense>
-          }
-        />
-        <Route
-          path='/manager'
-          element={
-            <Suspense
-              fallback={
-                <div className='main bg-black flex justify-center items-center'>
-                  <CircularProgress color='success' />;
-                </div>
-              }
-            >
-              <Auth />
-            </Suspense>
-          }
-        />
-        <Route
-          path='/support'
-          element={
-            <Suspense
-              fallback={
-                <div className='main bg-black flex justify-center items-center'>
-                  <CircularProgress color='success' />;
-                </div>
-              }
-            >
-              <Support />
-            </Suspense>
-          }
-        />
+        <Route path='/' element={<Main />} />
+        <Route path='/rules' element={<Rules />} />
+        <Route path='/app' element={<Application />} />
+        <Route path='/retail' element={<Retail />} />
+        <Route path='/manager' element={<Auth />} />
+        <Route path='/support' element={<Support />} />
         <Route
           path='/assortment'
           element={
             <QueryClientProvider client={queryClient}>
-              <Suspense
-                fallback={
-                  <div className='main bg-black flex justify-center items-center'>
-                    <CircularProgress color='success' />;
-                  </div>
-                }
-              >
-                <Assortment />
-              </Suspense>
+              <Assortment />
             </QueryClientProvider>
           }
         />
