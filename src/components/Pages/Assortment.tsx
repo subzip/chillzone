@@ -119,7 +119,7 @@ const Assortment = () => {
               numberOfRods={el.numberOfRods}
               tastes={el.tastes}
               price={el.price}
-              imageUrl={""}
+              imageUrl={el.imageUrl}
             />
           ))}
         {type === 2 &&
@@ -133,7 +133,7 @@ const Assortment = () => {
               volumeOfJars={el.volumeOfJars}
               tastes={el.tastes}
               price={el.price}
-              imageUrl={""}
+              imageUrl={el.imageUrl}
             />
           ))}
         {type === 3 &&
@@ -145,7 +145,7 @@ const Assortment = () => {
               isAvaliable={el.isAvaliable}
               colors={el.colors}
               price={el.price}
-              imageUrl={""}
+              imageUrl={el.imageUrl}
             />
           ))}
         {type === 4 &&
@@ -157,7 +157,7 @@ const Assortment = () => {
               isAvaliable={el.isAvaliable}
               resistant={el.resistant}
               price={el.price}
-              imageUrl={""}
+              imageUrl={el.imageUrl}
             />
           ))}
         {type === 5 &&
@@ -169,7 +169,7 @@ const Assortment = () => {
               isAvaliable={el.isAvaliable}
               consentration={el.consentration}
               price={el.price}
-              imageUrl={""}
+              imageUrl={el.imageUrl}
             />
           ))}
         {type === 6 &&
@@ -182,7 +182,7 @@ const Assortment = () => {
               tastes={el.tastes}
               amount={el.amount}
               price={el.price}
-              imageUrl={""}
+              imageUrl={el.imageUrl}
             />
           ))}
         {type === 7 && <Discount />}
