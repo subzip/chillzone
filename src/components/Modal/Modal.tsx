@@ -35,7 +35,10 @@ const Modal = ({ active, setActive, title, tastes }: ModalProps) => {
           </div>
           <div className='mt-[35px]'>
             {tastes.map((el) => (
-              <div key={el} className='text-lightgray text-[18px]'>
+              <div
+                key={`${Object.keys(el)}+${Math.random() * 10}`}
+                className='text-lightgray text-[18px]'
+              >
                 - {el.replaceAll("-", " ")}
               </div>
             ))}

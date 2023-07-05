@@ -131,7 +131,7 @@ const Assortment = () => {
               volumeOfJars={el.volumeOfJars}
               tastes={el.tastes}
               price={el.price}
-              imageUrl={"s"}
+              imageUrl={el.imageUrl}
             />
           ))}
         {type === 3 &&

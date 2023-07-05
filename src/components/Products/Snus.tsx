@@ -66,7 +66,7 @@ const Snus = ({
         <div className='flex gap-[15vw] mt-[2vh] items-center'>
           <p className='text-gray font-semibold'>
             {price.map((el) => (
-              <span>
+              <span key={`${Object.keys(el)}+${Math.random() * 10}`}>
                 От {Object.keys(el)}шт - {Object.values(el)}р <br />
               </span>
             ))}
