@@ -1,6 +1,5 @@
 import React from "react";
 import { CardProps } from "../types";
-import Line from "./Line";
 import {
   Popover,
   ButtonToolbar,

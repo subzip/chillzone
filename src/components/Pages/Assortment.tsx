@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import Line from "../Line";
 import Button from "../Button";
-import Disposable from "../Products/Disposable";
 import Discount from "../Products/Discount";
 import { useQuery } from "react-query";
 import {
@@ -20,15 +19,19 @@ import {
   PodProps,
   SnusProps,
 } from "../../types/index";
+
 import Nav from "../Nav";
-import Liquid from "../Products/Liquid";
-import Pod from "../Products/Pod";
-import Consumbles from "../Products/Consumbles";
-import Niko from "../Products/Niko";
-import Snus from "../Products/Snus";
+
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { CircularProgress } from "@mui/material";
+
+const Liquid = lazy(() => import("../Products/Liquid"));
+const Pod = lazy(() => import("../Products/Pod"));
+const Consumbles = lazy(() => import("../Products/Consumbles"));
+const Niko = lazy(() => import("../Products/Niko"));
+const Snus = lazy(() => import("../Products/Snus"));
+const Disposable = lazy(() => import("../Products/Disposable"));
 
 const Assortment = () => {
   const [type, setType] = useState(1);
@@ -104,85 +107,88 @@ const Assortment = () => {
         </div>
       </div>
       <Nav setType={setType} />
+
       <div>
-        {type === 1 &&
-          disposables.data.map((el: DisposableProps) => (
-            <Disposable
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              typeNikotine={el.typeNikotine}
-              isCharge={el.isCharge}
-              numberOfRods={el.numberOfRods}
-              tastes={el.tastes}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
-        {type === 2 &&
-          liquid.data.map((el: LiquidProps) => (
-            <Liquid
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              typeNikotine={el.typeNikotine}
-              volumeOfJars={el.volumeOfJars}
-              tastes={el.tastes}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
-        {type === 3 &&
-          pod.data.map((el: PodProps) => (
-            <Pod
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              colors={el.colors}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
-        {type === 4 &&
-          cons.data.map((el: ConsumblesProps) => (
-            <Consumbles
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              resistant={el.resistant}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
-        {type === 5 &&
-          niko.data.map((el: NikoProps) => (
-            <Niko
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              consentration={el.consentration}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
-        {type === 6 &&
-          snus.data.map((el: SnusProps) => (
-            <Snus
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              amount={el.amount}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
-        {type === 7 && <Discount />}
+        <Suspense fallback={<CircularProgress color='success' />}>
+          {type === 1 &&
+            disposables.data.map((el: DisposableProps) => (
+              <Disposable
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                typeNikotine={el.typeNikotine}
+                isCharge={el.isCharge}
+                numberOfRods={el.numberOfRods}
+                tastes={el.tastes}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
+          {type === 2 &&
+            liquid.data.map((el: LiquidProps) => (
+              <Liquid
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                typeNikotine={el.typeNikotine}
+                volumeOfJars={el.volumeOfJars}
+                tastes={el.tastes}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
+          {type === 3 &&
+            pod.data.map((el: PodProps) => (
+              <Pod
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                colors={el.colors}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
+          {type === 4 &&
+            cons.data.map((el: ConsumblesProps) => (
+              <Consumbles
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                resistant={el.resistant}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
+          {type === 5 &&
+            niko.data.map((el: NikoProps) => (
+              <Niko
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                consentration={el.consentration}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
+          {type === 6 &&
+            snus.data.map((el: SnusProps) => (
+              <Snus
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                amount={el.amount}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
+          {type === 7 && <Discount />}
+        </Suspense>
       </div>
       <div className='flex justify-center pt-[165px] pb-[25px] ml-[-15vw] '>
         <Footer />

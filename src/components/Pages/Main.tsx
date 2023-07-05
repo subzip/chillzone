@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import Bell from "../../assets/bell.png";
 import Person from "../../assets/person.png";

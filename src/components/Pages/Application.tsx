@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Button from "../Button";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import { Modal } from "react-bootstrap";
 import AppModal from "../Modal/AppModal";
 import styled, { keyframes } from "styled-components";
 import { slideInLeft } from "react-animations";
