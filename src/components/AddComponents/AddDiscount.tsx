@@ -1,9 +1,9 @@
 import { Input } from "antd";
-import JoditEditor from "jodit-react";
+
 import React, { useState } from "react";
 import { addDiscount } from "../../utils";
-import { config } from "../../types/config";
 import Button from "../Button";
+import Editor from "../JoditEditor";
 
 interface AddDiscountProps {
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
@@ -49,11 +49,7 @@ const AddDiscount = ({ setActive }: AddDiscountProps) => {
         />
       </div>
       <div className='editor w-[40vw] flex justify-center  mt-[1.5vh] max-lg:w-[70vw] max-sm:ml-[8vw] max-sm:max-h-[30vh]'>
-        <JoditEditor
-          value={value}
-          onChange={(e) => setValue(e)}
-          config={size > 640 ? config : { ...config, width: "75vw" }}
-        />
+        <Editor value={value} setValue={setValue} />
       </div>
       <div
         className='flex justify-center mt-[3vh] max-sm:mb-[15px] max-sm:mt-[9vh]'

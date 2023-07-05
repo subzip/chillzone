@@ -4,6 +4,7 @@ import JoditEditor from "jodit-react";
 import Button from "../Button";
 import { config } from "../../types/config";
 import { getOneDiscount, updateDiscount } from "../../utils";
+import Editor from "../JoditEditor";
 
 interface UpdateDiscountProps {
   active: boolean;
@@ -62,11 +63,7 @@ const UpdateDiscount = ({ active, setActive, id }: UpdateDiscountProps) => {
         />
       </div>
       <div className='editor w-[40vw] flex justify-center  mt-[1.5vh] max-lg:w-[70vw] max-sm:ml-[8vw] max-sm:max-h-[30vh]'>
-        <JoditEditor
-          value={value}
-          onChange={(e) => setValue(e)}
-          config={size > 640 ? config : { ...config, width: "75vw" }}
-        />
+        <Editor value={value} setValue={setValue} />
       </div>
       <div
         className='flex justify-center mt-[3vh] max-sm:mb-[15px] max-sm:mt-[9vh]'
