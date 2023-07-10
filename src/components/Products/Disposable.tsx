@@ -100,8 +100,8 @@ const Disposable = ({
           </div>
         </div>
       </div>
-      <div className='mr-[5vw] max-sm:ml-[5vw]'>
-        <img src={imageUrl} alt='' className='w-[255px] h-[325px]' />
+      <div className='mr-[5vw] max-sm:ml-[5vw] w-[325px] h-[325px]'>
+        <img src={imageUrl} alt='' className='' />
       </div>
       <Modal
         active={active}
