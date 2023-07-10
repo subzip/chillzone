@@ -59,7 +59,11 @@ const Liquid = ({
 
           <div className='flex pt-[15px] items-center'>
             <img src={isAvaliable ? existpng : notexistpng} alt='' />
-            <span className='text-lightgreen font-bold'>
+            <span
+              className={`text-lightgreen font-bold ${
+                !isAvaliable && "text-red"
+              }`}
+            >
               &nbsp;{isAvaliable ? `В наличии` : "Нет в наличии"}
             </span>
           </div>
@@ -95,7 +99,11 @@ const Liquid = ({
         </div>
       </div>
       <div className='mr-[5vw] max-sm:ml-[5vw] w-[255px] flex justify-center max-xl:ml-[5vw]'>
-        <img src={imageUrl} alt='' className=' h-[305px]' />
+        <img
+          src={imageUrl}
+          alt=''
+          className=' w-[200px] h-[400px] object-cover'
+        />
       </div>
       <Modal
         active={active}

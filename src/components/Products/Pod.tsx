@@ -79,7 +79,11 @@ const Pod = ({
         </div>
       </div>
       <div className='mr-[5vw] max-sm:ml-[5vw]'>
-        <img src={imageUrl} alt='' className='w-[325px] h-[325px]' />
+        <img
+          src={imageUrl}
+          alt=''
+          className='w-[325px] h-[350px] object-cover'
+        />
       </div>
 
       <Modal

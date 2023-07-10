@@ -100,11 +100,11 @@ const Disposable = ({
           </div>
         </div>
       </div>
-      <div className='mr-[5vw] max-sm:ml-[5vw] '>
+      <div className='mr-[5vw] max-sm:ml-[5vw] w-[330px] h-[370px] '>
         <img
           src={imageUrl}
           alt=''
-          className='w-[250px] h-[270px] object-cover'
+          className='w-[250px] h-[300px] object-cover'
         />
       </div>
       <Modal

@@ -76,7 +76,11 @@ const Consumbles = ({
         </div>
       </div>
       <div className='mr-[5vw] flex justify-center w-[325px]'>
-        <img src={imageUrl} alt='' className=' h-[325px]' />
+        <img
+          src={imageUrl}
+          alt=''
+          className=' w-[300px] h-[300px] object-cover'
+        />
       </div>
 
       <ModifyModal
