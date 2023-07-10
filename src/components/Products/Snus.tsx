@@ -67,7 +67,7 @@ const Snus = ({
           </div>
         </div>
         <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw]' />
-        <div className='flex gap-[15vw] mt-[2vh] items-center'>
+        <div className='flex gap-[15vw] mt-[2vh] items-center max-sm:flex-col max-sm:gap-[15px]'>
           <p className='text-gray font-semibold'>
             {price.map((el) => (
               <span key={`${Object.keys(el)}+${Math.random() * 10}`}>
