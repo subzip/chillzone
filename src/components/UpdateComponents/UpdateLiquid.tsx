@@ -89,8 +89,6 @@ const UpdateLiquid = ({
     });
   }, []);
 
-  console.log(result);
-
   const updatePost = () => {
     const response = updateLiquid(result, id);
     response.then((el) => {
@@ -100,7 +98,6 @@ const UpdateLiquid = ({
     });
   };
 
-  console.log(result);
   return (
     <div>
       <div className='flex flex-col text-white text-[20px] text-center gap-[3px] items-center justify-center max-2xl:text-[16px]'>

@@ -73,8 +73,6 @@ const UpdateCons = ({ id, active, setActive, modalType }: UpdateConsProps) => {
     });
   }, []);
 
-  console.log(result);
-
   const updatePost = () => {
     const response = updateCons(result, id);
     response.then((el) => {
@@ -84,7 +82,6 @@ const UpdateCons = ({ id, active, setActive, modalType }: UpdateConsProps) => {
     });
   };
 
-  console.log(result);
   return (
     <div>
       <div className='flex flex-col text-white text-[20px] text-center gap-[3px] items-center justify-center'>

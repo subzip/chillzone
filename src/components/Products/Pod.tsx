@@ -55,7 +55,11 @@ const Pod = ({
           </div>
           <div className='flex pt-[15px] items-center'>
             <img src={isAvaliable ? existpng : notexistpng} alt='' />
-            <span className='text-lightgreen font-bold'>
+            <span
+              className={`text-lightgreen font-bold ${
+                !isAvaliable && "text-red"
+              }`}
+            >
               &nbsp;{isAvaliable ? `В наличии` : "Нет в наличии"}
             </span>
           </div>

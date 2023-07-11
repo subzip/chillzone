@@ -21,7 +21,7 @@ const Nav = ({ setType }: NavProps) => {
     }
 
     e.currentTarget.className = "border-darkgray nav__item active__ px-[15px]";
-    console.log(e.currentTarget);
+
     setEl(e.currentTarget);
   };
   return (

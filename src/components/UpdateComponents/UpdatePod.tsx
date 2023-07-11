@@ -75,8 +75,6 @@ const UpdatePod = ({ id, active, setActive, modalType }: UpdatePodProps) => {
     });
   }, []);
 
-  console.log(result);
-
   const updatePost = () => {
     const response = updatePod(result, id);
     response.then((el) => {
@@ -86,7 +84,6 @@ const UpdatePod = ({ id, active, setActive, modalType }: UpdatePodProps) => {
     });
   };
 
-  console.log(result);
   return (
     <div>
       <div className='flex flex-col text-white text-[20px] text-center gap-[3px] items-center justify-center'>

@@ -77,8 +77,6 @@ const UpdateSnus = ({ id, active, setActive, modalType }: UpdateSnusProps) => {
     });
   }, []);
 
-  console.log(result);
-
   const updatePost = () => {
     const response = updateSnus(result, id);
     response.then((el) => {
@@ -88,7 +86,6 @@ const UpdateSnus = ({ id, active, setActive, modalType }: UpdateSnusProps) => {
     });
   };
 
-  console.log(result);
   return (
     <div>
       <div className='flex flex-col text-white text-[20px] text-center gap-[3px] items-center justify-center'>

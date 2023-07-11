@@ -55,8 +55,6 @@ const Assortment = () => {
 
   const { data: snus, isLoading: snusLoading } = useQuery("snus", getSnus);
 
-  console.log(type);
-
   if (
     dispLoading ||
     liquidLoading ||
@@ -108,83 +106,119 @@ const Assortment = () => {
       <Nav setType={setType} />
       <div>
         {type === 1 &&
-          disposables.data.map((el: DisposableProps) => (
-            <Disposable
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              typeNikotine={el.typeNikotine}
-              isCharge={el.isCharge}
-              numberOfRods={el.numberOfRods}
-              tastes={el.tastes}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
+          disposables.data
+            .sort(
+              (a: any, b: any) =>
+                Number(Object.values(b.price[0])[0]) -
+                Number(Object.values(a.price[0])[0])
+            )
+            .map((el: DisposableProps) => (
+              <Disposable
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                typeNikotine={el.typeNikotine}
+                isCharge={el.isCharge}
+                numberOfRods={el.numberOfRods}
+                tastes={el.tastes}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
         {type === 2 &&
-          liquid.data.map((el: LiquidProps) => (
-            <Liquid
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              typeNikotine={el.typeNikotine}
-              volumeOfJars={el.volumeOfJars}
-              tastes={el.tastes}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
+          liquid.data
+            .sort(
+              (a: any, b: any) =>
+                Number(Object.values(b.price[0])[0]) -
+                Number(Object.values(a.price[0])[0])
+            )
+            .map((el: LiquidProps) => (
+              <Liquid
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                typeNikotine={el.typeNikotine}
+                volumeOfJars={el.volumeOfJars}
+                tastes={el.tastes}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
         {type === 3 &&
-          pod.data.map((el: PodProps) => (
-            <Pod
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              colors={el.colors}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
+          pod.data
+            .sort(
+              (a: any, b: any) =>
+                Number(Object.values(b.price[0])[0]) -
+                Number(Object.values(a.price[0])[0])
+            )
+            .map((el: PodProps) => (
+              <Pod
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                colors={el.colors}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
         {type === 4 &&
-          cons.data.map((el: ConsumblesProps) => (
-            <Consumbles
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              resistant={el.resistant}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
+          cons.data
+            .sort(
+              (a: any, b: any) =>
+                Number(Object.values(b.price[0])[0]) -
+                Number(Object.values(a.price[0])[0])
+            )
+            .map((el: ConsumblesProps) => (
+              <Consumbles
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                resistant={el.resistant}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
         {type === 5 &&
-          niko.data.map((el: NikoProps) => (
-            <Niko
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              consentration={el.consentration}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
+          niko.data
+            .sort(
+              (a: any, b: any) =>
+                Number(Object.values(b.price[0])[0]) -
+                Number(Object.values(a.price[0])[0])
+            )
+            .map((el: NikoProps) => (
+              <Niko
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                consentration={el.consentration}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
         {type === 6 &&
-          snus.data.map((el: SnusProps) => (
-            <Snus
-              key={el._id}
-              _id={el._id}
-              title={el.title}
-              isAvaliable={el.isAvaliable}
-              tastes={el.tastes}
-              amount={el.amount}
-              price={el.price}
-              imageUrl={el.imageUrl}
-            />
-          ))}
+          snus.data
+            .sort(
+              (a: any, b: any) =>
+                Number(Object.values(b.price[0])[0]) -
+                Number(Object.values(a.price[0])[0])
+            )
+            .map((el: SnusProps) => (
+              <Snus
+                key={el._id}
+                _id={el._id}
+                title={el.title}
+                isAvaliable={el.isAvaliable}
+                tastes={el.tastes}
+                amount={el.amount}
+                price={el.price}
+                imageUrl={el.imageUrl}
+              />
+            ))}
         {type === 7 && <Discount />}
       </div>
       <div className='flex justify-center pt-[165px] pb-[25px] ml-[-15vw] '>

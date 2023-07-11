@@ -79,8 +79,6 @@ const UpdateNiko = ({ id, active, setActive, modalType }: UpdateNikoProps) => {
     });
   }, []);
 
-  console.log(result);
-
   const updatePost = () => {
     const response = updateNiko(result, id);
     response.then((el) => {
@@ -90,7 +88,6 @@ const UpdateNiko = ({ id, active, setActive, modalType }: UpdateNikoProps) => {
     });
   };
 
-  console.log(result);
   return (
     <div>
       <div className='flex flex-col text-white text-[20px] text-center gap-[3px] items-center justify-center'>

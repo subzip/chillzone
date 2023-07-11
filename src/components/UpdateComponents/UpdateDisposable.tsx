@@ -88,8 +88,6 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
     });
   }, []);
 
-  console.log(result);
-
   const updatePost = () => {
     const response = updateDisposable(result, id);
     response.then((el) => {
@@ -99,7 +97,6 @@ const UpdatePost = ({ id, active, setActive, modalType }: updatePostProps) => {
     });
   };
 
-  console.log(result);
   return (
     <div>
       <div className='flex flex-col text-white text-[20px] text-center gap-[3px] items-center justify-center max-2xl:text-[16px]'>

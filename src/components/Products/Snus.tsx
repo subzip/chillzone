@@ -25,7 +25,6 @@ const Snus = ({
     const check = window.confirm("Вы точно хотите удалить пост");
     if (!check) return;
     const result = deleteSnus(_id);
-    console.log(result);
   };
   console.log(_id);
   return (
@@ -56,8 +55,15 @@ const Snus = ({
             </div>
           </div>
           <div className='flex pt-[15px] items-center'>
-            <img src={isAvaliable ? existpng : notexistpng} alt='' />
-            <span className='text-lightgreen font-bold'>
+            <div>
+              <img src={isAvaliable ? existpng : notexistpng} alt='' />
+            </div>
+
+            <span
+              className={`text-lightgreen font-bold ${
+                !isAvaliable && "text-red"
+              }`}
+            >
               &nbsp;{isAvaliable ? `В наличии` : "Нет в наличии"}
             </span>
           </div>

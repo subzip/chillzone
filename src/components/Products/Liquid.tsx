@@ -25,8 +25,7 @@ const Liquid = ({
   const deletePost = () => {
     const check = window.confirm("Вы точно хотите удалить пост");
     if (!check) return;
-    const result = deleteLiquid(_id);
-    console.log(result);
+    deleteLiquid(_id);
   };
 
   return (
@@ -58,14 +57,16 @@ const Liquid = ({
           </div>
 
           <div className='flex pt-[15px] items-center'>
-            <img src={isAvaliable ? existpng : notexistpng} alt='' />
-            <span
+            <div>
+              <img src={isAvaliable ? existpng : notexistpng} alt='' />
+            </div>
+            <div
               className={`text-lightgreen font-bold ${
                 !isAvaliable && "text-red"
               }`}
             >
-              &nbsp;{isAvaliable ? `В наличии` : "Нет в наличии"}
-            </span>
+              &nbsp;{isAvaliable ? `В наличии` : `Нет в наличии`}
+            </div>
           </div>
           <div className='flex pt-[15px] items-center'>
             <img src={okpng} alt='' />

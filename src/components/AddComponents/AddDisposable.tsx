@@ -34,8 +34,6 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
     price.push(customObj);
   }
 
-  console.log(price);
-
   const result = {
     id: title + String(Math.random() * 100),
     title,
@@ -57,7 +55,7 @@ const AddDisposable = ({ setActive, modalType }: AddDisposableProps) => {
       el.status === 200 ? setActive(false) : alert("Mistake")
     );
   };
-  console.log(result);
+
   return (
     <div className='flex flex-col items-center ml-[-2vw] '>
       <div className='flex flex-col text-white text-[20px] text-center gap-[3px] max-2xl:text-[16px]'>

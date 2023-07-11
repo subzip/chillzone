@@ -28,8 +28,15 @@ const Disposable = ({
     const check = window.confirm("Вы точно хотите удалить пост");
     if (!check) return;
     const result = deleteDisposable(_id);
-    console.log(result);
   };
+
+  let newType = [];
+  newType.push(typeNikotine.type[0].toUpperCase());
+  for (let i = 1; i < typeNikotine.type.length; i++) {
+    newType.push(typeNikotine.type[i]);
+  }
+
+  let typeNiko = newType.join("");
 
   return (
     <div className='flex w-[65vw]  justify-center ml-[6vw] mt-[5vh] max-xl:w-[80vw] max-xl:ml-[14vw]  max-xl:items-center max-sm:ml-[30px] max-xl:flex-col-reverse'>
@@ -60,15 +67,21 @@ const Disposable = ({
           </div>
 
           <div className='flex pt-[15px] items-center'>
-            <img src={isAvaliable ? existpng : notexistpng} alt='' />
-            <span className='text-lightgreen font-bold'>
+            <div>
+              <img src={isAvaliable ? existpng : notexistpng} alt='' />
+            </div>
+            <span
+              className={`text-lightgreen font-bold ${
+                !isAvaliable && "text-red"
+              }`}
+            >
               &nbsp;{isAvaliable ? `В наличии` : "Нет в наличии"}
             </span>
           </div>
           <div className='flex pt-[15px] items-center'>
             <img src={okpng} alt='' />
             <span className='text-gray'>
-              &nbsp;&nbsp;&nbsp;{typeNikotine.percent} - {typeNikotine.type}
+              &nbsp;&nbsp;&nbsp;{typeNikotine.percent}% - {typeNiko} никотин
             </span>
           </div>
           <div className='flex pt-[15px] items-center'>

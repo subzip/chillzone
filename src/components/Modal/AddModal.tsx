@@ -21,7 +21,7 @@ interface AddModalProps {
 
 const AddModal = ({ active, setActive, title, tastes }: AddModalProps) => {
   const [type, setType] = useState("1");
-  console.log(typeof type);
+
   return (
     <div
       className={active ? "modal active" : "modal"}
