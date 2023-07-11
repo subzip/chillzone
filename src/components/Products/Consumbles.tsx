@@ -22,16 +22,17 @@ const Consumbles = ({
     const check = window.confirm("Вы точно хотите удалить пост");
     if (!check) return;
     const result = deleteCons(_id);
-    console.log(result);
   };
 
   console.log(_id);
   return (
-    <div className='flex w-[65vw] justify-center ml-[6vw] mt-[5vh] max-xl:w-[80vw] max-xl:ml-[14vw] max-xl:items-center max-sm:ml-[30px] max-xl:flex-col-reverse'>
+    <div className='flex w-[65vw] justify-center ml-[6vw] mt-[5vh] max-xl:w-[80vw] max-xl:ml-[14vw] max-xl:items-center max-sm:ml-[0px] max-xl:flex-col-reverse max-sm:w-[100vw] max-sm:items-center'>
       <div className='flex w-[40vw] flex-col max-sm:w-[65vw]'>
         <div>
           <div className='flex items-center justify-between max-sm:flex-wrap max-xl:justify-center'>
-            <h1 className='text-white text-[25px] font-bold'>{title}</h1>
+            <h1 className='text-white text-[25px] font-bold max-sm:text-[18px]'>
+              {title}
+            </h1>
             <div
               className={
                 window.localStorage.getItem("token")
@@ -68,8 +69,8 @@ const Consumbles = ({
             <span className='text-gray'>&nbsp;&nbsp;&nbsp;{resistant} Ом</span>
           </div>
         </div>
-        <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw]' />
-        <div className='flex gap-[15vw] mt-[2vh] items-center'>
+        <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw] max-sm:w-[65vw]' />
+        <div className='flex gap-[15vw] mt-[2vh] items-center max-xl:flex-col max-xl:gap-[15px]'>
           <p className='text-gray font-semibold'>
             {price.map((el) => (
               <span key={`${Object.keys(el)}+${Math.random() * 10}`}>
@@ -79,11 +80,11 @@ const Consumbles = ({
           </p>
         </div>
       </div>
-      <div className='mr-[5vw] flex justify-center w-[325px]'>
+      <div className='mr-[5vw] flex justify-center max-sm:h-[270px]'>
         <img
           src={imageUrl}
           alt=''
-          className=' w-[300px] h-[300px] object-cover'
+          className=' w-[300px] h-[300px] object-cover max-sm:w-[250px] max-sm:h-[250px]'
         />
       </div>
 

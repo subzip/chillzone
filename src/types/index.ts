@@ -36,7 +36,7 @@ export interface LiquidProps {
     amount: string;
     type: string;
   };
-  volumeOfJars: number;
+  volumeOfJar: number;
   tastes: Array<string>;
   price: Array<object>;
   imageUrl: string;

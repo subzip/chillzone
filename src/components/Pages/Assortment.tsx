@@ -140,7 +140,7 @@ const Assortment = () => {
                 title={el.title}
                 isAvaliable={el.isAvaliable}
                 typeNikotine={el.typeNikotine}
-                volumeOfJars={el.volumeOfJars}
+                volumeOfJar={el.volumeOfJar}
                 tastes={el.tastes}
                 price={el.price}
                 imageUrl={el.imageUrl}

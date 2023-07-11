@@ -32,7 +32,9 @@ const Snus = ({
       <div className='flex w-[40vw] flex-col max-sm:w-[65vw]'>
         <div>
           <div className='flex items-center justify-between max-sm:flex-wrap max-xl:justify-center'>
-            <h1 className='text-white text-[25px] font-bold'>{title}</h1>
+            <h1 className='text-white text-[25px] font-bold max-sm:text-[18px]'>
+              {title}
+            </h1>
             <div
               className={
                 window.localStorage.getItem("token")
@@ -72,7 +74,7 @@ const Snus = ({
             <span className='text-gray'>&nbsp;&nbsp;{amount}mg</span>
           </div>
         </div>
-        <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw]' />
+        <div className='border-t-[2px] border-dotted  border-darkgray mt-[2vh] w-[30vw] max-sm:w-[65vw]' />
         <div className='flex gap-[15vw] mt-[2vh] items-center max-sm:flex-col max-sm:gap-[15px]'>
           <p className='text-gray font-semibold'>
             {price.map((el) => (
@@ -82,7 +84,7 @@ const Snus = ({
             ))}
           </p>
           <div
-            className='bg-yellow w-[6vw] items-center justify-center h-[4vh] flex text-center pr-[3px] rounded-full cursor-pointer mt-[2vh] shadow-button max-xl:w-[120px] max-xl:h-[50px] '
+            className='bg-yellow w-[6vw] items-center justify-center h-[4vh] flex text-center pr-[3px] rounded-full cursor-pointer mt-[2vh] shadow-button max-xl:w-[120px] max-xl:h-[50px] max-sm:h-[40px]'
             onClick={() => setActive(true)}
           >
             <img src={tastepng} alt='' />
@@ -90,8 +92,12 @@ const Snus = ({
           </div>
         </div>
       </div>
-      <div className='mr-[5vw]'>
-        <img src={imageUrl} alt='' className='w-[325px] h-[325px]' />
+      <div className='mr-[5vw] max-sm:ml-[5vw]  max-sm:h-[270px]'>
+        <img
+          src={imageUrl}
+          alt=''
+          className='w-[325px] h-[325px] object-cover max-sm:w-[250px] max-sm:h-[250px]'
+        />
       </div>
 
       <Modal
