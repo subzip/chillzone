@@ -26,7 +26,7 @@ const Assortment = () => {
         Ассортимент
       </h1>
       <div className='ml-[30vw] mt-[1vh] '>
-        <Line styles='w-[10vw] max-sm:w-[35vw]' />
+        <Line styles='w-[10vw] max-sm:w-[35vw] max-sm:ml-[2vw]' />
       </div>
       <div className='flex border-[1px] border-darkgray rounded-3xl w-[60vw] ml-[6vw] mt-[5vh] px-[25px] py-[35px] justify-between items-center max-xl:hidden'>
         <div className='flex gap-[65px] items-center'>

@@ -1,6 +1,6 @@
 import React from "react";
 import Line from "../Line";
-import deletepng from "../../assets/delete.png";
+import deletepng from "../../assets/delete.svg";
 
 interface ModalProps {
   active: boolean;
@@ -22,7 +22,7 @@ const Modal = ({ active, setActive, title, tastes }: ModalProps) => {
         <img
           src={deletepng}
           alt=''
-          className='absolute ml-[45vw] mt-[-4.5vh] max-sm:ml-[85vw] max-sm:mt-[-4vh]'
+          className='absolute ml-[45vw] mt-[-4.5vh] max-sm:ml-[85vw] max-sm:mt-[-5.2vh] w-[32px] h-[32px] '
           onClick={() => setActive(false)}
         />
         <h1 className='text-white text-[35px] font-semibold tracking-wider'>

@@ -1,6 +1,6 @@
 import React from "react";
 import Line from "../Line";
-import deletepng from "../../assets/delete.png";
+import deletepng from "../../assets/delete.svg";
 import UpdateDisposable from "../UpdateComponents/UpdateDisposable";
 import UpdateLiquid from "../UpdateComponents/UpdateLiquid";
 import UpdatePod from "../UpdateComponents/UpdatePod";
@@ -34,7 +34,7 @@ const ModifyModal = ({
         <img
           src={deletepng}
           alt=''
-          className='absolute ml-[60vw] mt-[-3vh] max-sm:ml-[80vw] max-sm:mt-[-4vh]'
+          className='absolute ml-[60vw] mt-[-3vh] max-sm:ml-[80vw] max-sm:mt-[-5.2vh] w-[32px] h-[32px]'
           onClick={() => setActive(false)}
         />
         <h1 className='text-white text-[35px] font-semibold tracking-wider max-lg:text-[25px]'>

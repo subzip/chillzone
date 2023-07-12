@@ -121,7 +121,7 @@ const Rules = () => {
       </h2>
 
       <div className={`pt-[5vh] ${active ? "hidden" : ""}`}>
-        <div className='swiper-button image-swiper-button-next absolute mt-[13vh] ml-[67vw] max-sm:ml-[75vw] cursor-pointer '>
+        <div className='swiper-button image-swiper-button-next absolute mt-[13vh] ml-[67vw] max-sm:ml-[78vw] cursor-pointer '>
           <RightOutlined style={{ color: "white", fontSize: "25px" }} />
         </div>
         <div className='swiper-button image-swiper-button-prev absolute mt-[13vh] ml-[10vw] cursor-pointer max-xl:ml-[-5vw]'>

@@ -25,7 +25,7 @@ const Nav = ({ setType }: NavProps) => {
     setEl(e.currentTarget);
   };
   return (
-    <div className='flex nav__ text-light justify-center gap-[10px] cursor-pointer mt-[4vh] ml-[5vw] items-center flex-wrap w-[60vw] max-xl:gap-[10px] max-xl:w-[80vw] '>
+    <div className='flex nav__ text-light justify-center gap-[10px] cursor-pointer mt-[4vh] ml-[5vw] items-center flex-wrap w-[60vw] max-xl:gap-[10px] max-xl:w-[80vw] max-sm:ml-[10vw]'>
       <div
         className={window.localStorage.getItem("token") ? "" : "none"}
         onClick={() => setActive(true)}
