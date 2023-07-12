@@ -1,73 +1,21 @@
 import React, { useState } from "react";
 import Line from "../Line";
 import Button from "../Button";
-import Disposable from "../Products/Disposable";
 import Discount from "../Products/Discount";
-import { useQuery } from "react-query";
-import {
-  getCons,
-  getDisposable,
-  getLiquid,
-  getNiko,
-  getPod,
-  getSnus,
-} from "../../utils";
-import {
-  ConsumblesProps,
-  DisposableProps,
-  LiquidProps,
-  NikoProps,
-  PodProps,
-  SnusProps,
-} from "../../types/index";
-
 import Nav from "../Nav";
-
-import Pod from "../Products/Pod";
-import Consumbles from "../Products/Consumbles";
-import Niko from "../Products/Niko";
-import Snus from "../Products/Snus";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { CircularProgress } from "@mui/material";
-import Liquid from "../Products/Liquid";
+import DisposableContainer from "../Containers/DisposableContainer";
+import LiquidContainer from "../Containers/LiquidContainer";
+import PodsContainer from "../Containers/PodsContainer";
+import ConsContainer from "../Containers/ConsContainer";
+import NikoContainer from "../Containers/NikoContainer";
+import SnusContainer from "../Containers/SnusContainer";
 
 const Assortment = () => {
   const [type, setType] = useState(1);
 
-  const { data: disposables, isLoading: dispLoading } = useQuery(
-    "disposables",
-    getDisposable
-  );
-
-  const { data: liquid, isLoading: liquidLoading } = useQuery(
-    "liquid",
-    getLiquid
-  );
-
   const size = window.screen.width;
-
-  const { data: pod, isLoading: podLoading } = useQuery("pod", getPod);
-
-  const { data: cons, isLoading: consLoading } = useQuery("cons", getCons);
-
-  const { data: niko, isLoading: nikoLoading } = useQuery("niko", getNiko);
-
-  const { data: snus, isLoading: snusLoading } = useQuery("snus", getSnus);
-
-  if (
-    dispLoading ||
-    liquidLoading ||
-    podLoading ||
-    consLoading ||
-    nikoLoading ||
-    snusLoading
-  )
-    return (
-      <div className='main bg-black flex justify-center items-center'>
-        <CircularProgress color='success' />;
-      </div>
-    );
 
   return (
     <div className='main bg-black h-fit'>
@@ -105,120 +53,12 @@ const Assortment = () => {
       </div>
       <Nav setType={setType} />
       <div>
-        {type === 1 &&
-          disposables.data
-            .sort(
-              (a: any, b: any) =>
-                Number(Object.values(b.price[0])[0]) -
-                Number(Object.values(a.price[0])[0])
-            )
-            .map((el: DisposableProps) => (
-              <Disposable
-                key={el._id}
-                _id={el._id}
-                title={el.title}
-                isAvaliable={el.isAvaliable}
-                typeNikotine={el.typeNikotine}
-                isCharge={el.isCharge}
-                numberOfRods={el.numberOfRods}
-                tastes={el.tastes}
-                price={el.price}
-                imageUrl={el.imageUrl}
-              />
-            ))}
-        {type === 2 &&
-          liquid.data
-            .sort(
-              (a: any, b: any) =>
-                Number(Object.values(b.price[0])[0]) -
-                Number(Object.values(a.price[0])[0])
-            )
-            .map((el: LiquidProps) => (
-              <Liquid
-                key={el._id}
-                _id={el._id}
-                title={el.title}
-                isAvaliable={el.isAvaliable}
-                typeNikotine={el.typeNikotine}
-                volumeOfJar={el.volumeOfJar}
-                tastes={el.tastes}
-                price={el.price}
-                imageUrl={el.imageUrl}
-              />
-            ))}
-        {type === 3 &&
-          pod.data
-            .sort(
-              (a: any, b: any) =>
-                Number(Object.values(b.price[0])[0]) -
-                Number(Object.values(a.price[0])[0])
-            )
-            .map((el: PodProps) => (
-              <Pod
-                key={el._id}
-                _id={el._id}
-                title={el.title}
-                isAvaliable={el.isAvaliable}
-                colors={el.colors}
-                price={el.price}
-                imageUrl={el.imageUrl}
-              />
-            ))}
-        {type === 4 &&
-          cons.data
-            .sort(
-              (a: any, b: any) =>
-                Number(Object.values(b.price[0])[0]) -
-                Number(Object.values(a.price[0])[0])
-            )
-            .map((el: ConsumblesProps) => (
-              <Consumbles
-                key={el._id}
-                _id={el._id}
-                title={el.title}
-                isAvaliable={el.isAvaliable}
-                resistant={el.resistant}
-                price={el.price}
-                imageUrl={el.imageUrl}
-              />
-            ))}
-        {type === 5 &&
-          niko.data
-            .sort(
-              (a: any, b: any) =>
-                Number(Object.values(b.price[0])[0]) -
-                Number(Object.values(a.price[0])[0])
-            )
-            .map((el: NikoProps) => (
-              <Niko
-                key={el._id}
-                _id={el._id}
-                title={el.title}
-                isAvaliable={el.isAvaliable}
-                consentration={el.consentration}
-                price={el.price}
-                imageUrl={el.imageUrl}
-              />
-            ))}
-        {type === 6 &&
-          snus.data
-            .sort(
-              (a: any, b: any) =>
-                Number(Object.values(b.price[0])[0]) -
-                Number(Object.values(a.price[0])[0])
-            )
-            .map((el: SnusProps) => (
-              <Snus
-                key={el._id}
-                _id={el._id}
-                title={el.title}
-                isAvaliable={el.isAvaliable}
-                tastes={el.tastes}
-                amount={el.amount}
-                price={el.price}
-                imageUrl={el.imageUrl}
-              />
-            ))}
+        {type === 1 && <DisposableContainer />}
+        {type === 2 && <LiquidContainer />}
+        {type === 3 && <PodsContainer />}
+        {type === 4 && <ConsContainer />}
+        {type === 5 && <NikoContainer />}
+        {type === 6 && <SnusContainer />}
         {type === 7 && <Discount />}
       </div>
       <div className='flex justify-center pt-[165px] pb-[25px] ml-[-15vw] '>
