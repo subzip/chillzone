@@ -29,7 +29,7 @@ const Modal = ({ active, setActive, title, tastes }: ModalProps) => {
           Вкусы:
         </h1>
         <Line styles='bg-yellow w-[10vw] h-[2px] mt-[10px]' />
-        <div className='border-t-yellow border-[1px] border-gray border-t-[2px] w-[42vw]  mt-[5vh] max-sm:w-[75vw] max-sm:h-[75vh]'>
+        <div className='border-t-yellow border-[1px] border-gray border-t-[2px] w-[42vw]  mt-[5vh] max-sm:w-[75vw] max-sm:h-fit max-sm:pb-[15px] max-sm:min-h-full'>
           <div className='text-yellow text-[25px] font-semibold text-center'>
             {title}
           </div>
