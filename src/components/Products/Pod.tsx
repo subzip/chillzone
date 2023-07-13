@@ -98,12 +98,14 @@ const Pod = ({
         tastes={colors}
       />
 
-      <ModifyModal
-        active={activeModify}
-        setActive={setActiveModify}
-        modalType={3}
-        id={_id}
-      />
+      {activeModify && (
+        <ModifyModal
+          active={activeModify}
+          setActive={setActiveModify}
+          modalType={1}
+          id={_id}
+        />
+      )}
     </div>
   );
 };

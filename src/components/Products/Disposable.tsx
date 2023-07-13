@@ -128,13 +128,14 @@ const Disposable = ({
         title={title}
         tastes={tastes}
       />
-
-      <ModifyModal
-        active={activeModify}
-        setActive={setActiveModify}
-        modalType={1}
-        id={_id}
-      />
+      {activeModify && (
+        <ModifyModal
+          active={activeModify}
+          setActive={setActiveModify}
+          modalType={1}
+          id={_id}
+        />
+      )}
     </div>
   );
 };

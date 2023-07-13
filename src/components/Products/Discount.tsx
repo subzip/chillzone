@@ -24,7 +24,6 @@ const Discount = () => {
     const check = window.confirm("Вы точно хотите удалить пост");
     if (!check) return;
     const result = deleteDiscount(id);
-    console.log(result);
   };
 
   return (
@@ -37,7 +36,10 @@ const Discount = () => {
 
       <div>
         {discounts.data.map((el: DiscountProps) => (
-          <div className='flex  gap-[130px] max-lg:flex-col max-lg:items-center max-lg:gap-[25px] mt-[8vh] max-w-[70vw] py-[20px] rounded-2xl shadow-button px-[20px] ml-[2vw] max-lg:max-w-[90vw] max-lg:ml-[5vw]'>
+          <div
+            key={el._id}
+            className='flex  gap-[130px] max-lg:flex-col max-lg:items-center max-lg:gap-[25px] mt-[8vh] max-w-[70vw] py-[20px] rounded-2xl shadow-button px-[20px] ml-[2vw] max-lg:max-w-[90vw] max-lg:ml-[5vw]'
+          >
             <div className='max-lg:max-w-[90vw] w-[35vw]'>
               <img src={el.imageUrl} alt='Картинка' className='m-auto mt-0' />
             </div>

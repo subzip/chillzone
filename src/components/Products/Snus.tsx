@@ -107,12 +107,14 @@ const Snus = ({
         tastes={tastes}
       />
 
-      <ModifyModal
-        active={activeModify}
-        setActive={setActiveModify}
-        modalType={6}
-        id={_id}
-      />
+      {activeModify && (
+        <ModifyModal
+          active={activeModify}
+          setActive={setActiveModify}
+          modalType={1}
+          id={_id}
+        />
+      )}
     </div>
   );
 };

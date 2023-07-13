@@ -89,12 +89,14 @@ const Niko = ({
         />
       </div>
 
-      <ModifyModal
-        active={activeModify}
-        setActive={setActiveModify}
-        modalType={5}
-        id={_id}
-      />
+      {activeModify && (
+        <ModifyModal
+          active={activeModify}
+          setActive={setActiveModify}
+          modalType={1}
+          id={_id}
+        />
+      )}
     </div>
   );
 };

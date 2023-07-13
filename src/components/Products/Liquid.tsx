@@ -116,12 +116,14 @@ const Liquid = ({
         tastes={tastes}
       />
 
-      <ModifyModal
-        active={activeModify}
-        setActive={setActiveModify}
-        modalType={2}
-        id={_id}
-      />
+      {activeModify && (
+        <ModifyModal
+          active={activeModify}
+          setActive={setActiveModify}
+          modalType={1}
+          id={_id}
+        />
+      )}
     </div>
   );
 };
